@@ -1,11 +1,9 @@
-import { async, ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync, tick, inject } from '@angular/core/testing';
 
 import { AsynchronousComponent } from './asynchronous.component';
 import { AuthService } from '../auth.service';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { doesNotThrow } from 'assert';
-import { tick } from '@angular/core/src/render3';
 
 describe('AsynchronousComponent', () => {
   let component: AsynchronousComponent;
@@ -61,7 +59,7 @@ describe('AsynchronousComponent', () => {
 
   // using angular async --recommented
   xit('logout Button should be shown when user is logged in', async(() => {
-    const spy = spyOn(authService, 'getItem').and.returnValue(Promise.resolve(true));
+    spyOn(authService, 'getItem').and.returnValue(Promise.resolve(true));
     component.ngOnInit();
 
     fixture.whenStable().then(() => {
@@ -73,7 +71,7 @@ describe('AsynchronousComponent', () => {
 
   // using angular async --recommented
   xit('login button should be shown when user is logged out', async(() => {
-    const spy = spyOn(authService, 'getItem').and.returnValue(Promise.resolve(false));
+    spyOn(authService, 'getItem').and.returnValue(Promise.resolve(false));
     component.ngOnInit();
 
     fixture.whenStable().then(() => {
@@ -85,7 +83,7 @@ describe('AsynchronousComponent', () => {
 
     // using angular FakeAsync --recommented
     it('logout Button should be shown when user is logged in', fakeAsync(() => {
-      const spy = spyOn(authService, 'getItem').and.returnValue(Promise.resolve(true));
+      spyOn(authService, 'getItem').and.returnValue(Promise.resolve(true));
       component.ngOnInit();
       tick(500);
       fixture.detectChanges();
@@ -95,11 +93,21 @@ describe('AsynchronousComponent', () => {
 
     // using angular FakeAsync --recommented
     it('login button should be shown when user is logged out', fakeAsync(() => {
-      const spy = spyOn(authService, 'getItem').and.returnValue(Promise.resolve(false));
+      spyOn(authService, 'getItem').and.returnValue(Promise.resolve(false));
       component.ngOnInit();
       tick(500);
       fixture.detectChanges();
       expect(component.needsLogin).toBe(true);
       expect(el.nativeElement.textContent.trim()).toBe('Login');
     }));
+
+    // testing dependency injection - recommented
+    xit('Service injected via inject and testbed Service should be the same', () => {
+      inject([AuthService], (injectService: AuthService ) => {
+        expect(injectService).toBe(authService);
+      });
+    });
+
+    // there is a second dependecy way to test dependency injection which I haven´t understand
+
 });

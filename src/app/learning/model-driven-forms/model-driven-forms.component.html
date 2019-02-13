@@ -1,0 +1,48 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+  <fieldset formGroupName="name">
+    <div>
+      <label class="red">First Name</label>
+      <input type="text" formControlName="firstName">
+    </div>
+    <div>
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName">
+    </div>
+</fieldset>
+  <div class="form">
+    <label>Email</label>
+    <input type="email" formControlName="email" class="form-control"
+    [ngClass]="{
+      'not-valid': email.invalid && (email.touched || email.dirty),
+      'valid': email.valid && (email.touched || email.dirty)
+    }">
+    <div *ngIf="email.errors && (email.touched || email.dirty),">
+      <p *ngIf="email.errors['required']">Email is required</p>
+      <p *ngIf="email.errors['pattern']">The Email address must contain at least the @ character</p>
+    </div>
+    <pre>dirty? {{email.dirty}}</pre>
+    <pre>pristine? email.pristine}}</pre>
+    <pre>touched? {{email.touched}}</pre>
+    <pre>untouched? {{email.untouched}}</pre>
+    <pre>valid? {{email.valid}}</pre>
+    <pre>invalid? {{email.invalid}}</pre>
+
+  </div>
+
+  <div>
+    <label>password</label>
+    <input type="password" formControlName="password">
+  </div>
+
+  <div>
+    <label>Language</label>
+    <select formControlName="language">
+      <option value="">Please select a language</option>
+      <option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
+    </select>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<pre>{{myForm.value | json}}</pre>

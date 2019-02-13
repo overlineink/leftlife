@@ -8,6 +8,11 @@ import { StringTestComponent } from './string-test/string-test.component';
 import { VoteComponent } from './vote/vote.component';
 import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 import { AsynchronousComponent } from './asynchronous/asynchronous.component';
+import { ComponentTestComponent } from './component-test/component-test.component';
+import { ModelDrivenFormsComponent } from './model-driven-forms/model-driven-forms.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveModelDrivenFormsComponent } from './reactive-model-driven-forms/reactive-model-driven-forms.component';
+
 
 @NgModule({
   declarations: [
@@ -18,10 +23,15 @@ import { AsynchronousComponent } from './asynchronous/asynchronous.component';
     StringTestComponent,
     VoteComponent,
     ChangeDetectionComponent,
-    AsynchronousComponent
+    AsynchronousComponent,
+    ComponentTestComponent,
+    ModelDrivenFormsComponent,
+    ReactiveModelDrivenFormsComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     OberservablesComponent,
@@ -31,7 +41,10 @@ import { AsynchronousComponent } from './asynchronous/asynchronous.component';
     StringTestComponent,
     VoteComponent,
     ChangeDetectionComponent,
-    AsynchronousComponent
+    AsynchronousComponent,
+    ComponentTestComponent,
+    ModelDrivenFormsComponent,
+    ReactiveModelDrivenFormsComponent
   ]
 })
 export class LearningModule { }
