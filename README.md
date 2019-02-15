@@ -5,22 +5,22 @@ The goal of this project ist to build an application which supports political pa
 The final result should be similiar to this prototype:
 (https://xd.adobe.com/view/4934154e-d639-45d7-47ab-212c20ac9258-3f05/)
 
-#Contact
+# Contact
 If you would like to support this project, use Github or write me an email: tobias.hassebrock@gmail.com
 
-#Current Dependencies
+# Current Dependencies
 1. Framework: Angular (https://angular.io)
 2. Design: Angular Material(https://material.angular.io)
 3. Backend API: AngularFire2 (https://github.com/angular/angularfire2)
 4. Backend: Firebase (https://firebase.google.com/)
 5. Authentification: (https://ngx-auth-firebaseui.firebaseapp.com)
 
-#Current Main Task
+# Current Main Task
 1. Build the profile
     with Authentification/Login
     CRUD API
 
-##Angular
+## Angular
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## Development server
