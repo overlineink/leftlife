@@ -7,6 +7,7 @@ import { LearningModule } from './learning/learning.module';
 import { CoreModule } from './core/core.module';
 import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
+import { SearchModule } from './search/search.module';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { SharedModule } from './shared/shared.module';
     LearningModule,
     CoreModule,
     SharedModule,
-    ProfileModule
+    ProfileModule,
+    SearchModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

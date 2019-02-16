@@ -1,0 +1,12 @@
+.structure {
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 14px;
+    padding: 14px;
+  }

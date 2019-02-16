@@ -1,0 +1,17 @@
+.inline {
+    vertical-align: top;
+    display: inline;
+    font-size: 20px;
+}
+
+.float-right {
+    float: right;
+}
+
+.margin-right {
+    margin-right: 18px;
+}
+
+.pointer {
+    cursor: pointer;
+}

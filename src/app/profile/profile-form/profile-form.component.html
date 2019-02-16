@@ -1,0 +1,25 @@
+<div *ngIf="authService.user$ | async as user">
+ 
+    <form [formGroup]="editForm" (ngSubmit)="toggleEditMode()">
+
+        <button class="margin-input margin-bot" mat-raised-button color="primary" type="submit">{{editButton}}</button>
+        <br>
+        <mat-form-field class="margin-input">
+            <input matInput type="text" formControlName="local" value="{{user.local}}" placeholder="Location">
+        </mat-form-field>
+
+        <mat-form-field class="margin-input">
+            <input matInput type="text" formControlName="regional" value="{{user.regional}}" placeholder="Region">
+        </mat-form-field>
+
+        <mat-form-field class="margin-input">
+            <input matInput type="text" formControlName="federal" value="{{user.federal}}" placeholder="Federation">
+        </mat-form-field>
+
+        <mat-form-field class="margin-input">
+            <input matInput type="text" formControlName="continental" value="{{user.continental}}" placeholder="Continent">
+        </mat-form-field>
+        <br>
+        <app-hashtags-edit [editMode]="editMode" [hashtags]="user.hashtags"></app-hashtags-edit>
+  </form>
+  </div>

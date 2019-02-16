@@ -1,0 +1,57 @@
+<app-structure>
+  <mat-card class="post-card">
+      <div class="center">
+        <mat-form-field>
+          <input class="center" matInput placeholder="Suche Namen">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input class="center" matInput placeholder="Suche Themen">
+        </mat-form-field>
+        <mat-chip-list>
+          <mat-chip>#Europa</mat-chip>
+          <mat-chip>#Digitales</mat-chip>
+          <mat-chip>#EU</mat-chip>
+        </mat-chip-list>
+        <div>
+          <p class="inline-block">heute</p>
+          <mat-slider class="inline-block"></mat-slider>
+          <p class="inline-block">alle</p>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card class="post-card">
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>select_all</mat-icon>
+          </ng-template>
+          <app-search-all></app-search-all>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>person</mat-icon>
+          </ng-template>
+          <app-search-persons></app-search-persons>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>assignment</mat-icon>
+          </ng-template>
+          <app-search-ideas></app-search-ideas>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>groups</mat-icon>
+          </ng-template>
+          <app-search-groups></app-search-groups>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>event</mat-icon>
+          </ng-template>
+          <app-search-events></app-search-events>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </app-structure>

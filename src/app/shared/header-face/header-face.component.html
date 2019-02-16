@@ -1,0 +1,8 @@
+<mat-card-header *ngIf="photoURL" class="justify">
+    <img mat-card-avatar src="{{photoURL}}"class="post-header-image" matTooltip="Profile">
+    <mat-card-title class="pointer">{{name}}</mat-card-title>
+    <mat-card-subtitle class="pointer inline-block margin-bot-16" >
+      {{local}} - {{regional}} - {{federal}} </mat-card-subtitle>
+    <!-- <app-profile-button class="pointer right" *ngFor="let location of person?.locations">{{location.location}}></app-profile-button>-->
+  </mat-card-header>
+  

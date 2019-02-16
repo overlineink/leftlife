@@ -1,0 +1,13 @@
+.post-header-image {
+    /*background-image: url('/assets/img/Tobi.jpg');*/
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .margin-bot-16 {
+    margin-bottom: 16px;
+  }
+
+.justify {
+    justify-content: center;
+}

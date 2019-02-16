@@ -1,0 +1,35 @@
+<div class="dropzone" 
+     dropZone
+     (hovered)="toggleHover($event)"
+     (dropped)="startUpload($event)"
+     [class.hovering]="isHovering">
+
+     <h3>{{zoneName}}</h3>
+    <button mat-raised-button color="primary" (click)="photoInput.click()">{{buttonName}}
+      <input hidden color="primary" #photoInput class="file-input" type="file" (change)="startUpload($event.target.files)">
+    </button>
+
+    <div *ngIf="percentage | async as pct">
+      <mat-progress-bar class="progress margin-top-14" 
+                [value]="pct" 
+                max="100">        
+      </mat-progress-bar>
+      {{ pct | number }}%
+    </div>
+</div>
+
+<!--<div *ngIf="snapshot | async as snap">-->
+  <!--Enables Uploaded File size information
+    {{ snap.bytesTransferred | fileSize }} of {{ snap.totalBytes | fileSize }}-->
+
+  <!--<div *ngIf="downloadURL | async as url" class="center">
+    <h3>{{previewName}}</h3>
+    <img [src]="url"><br>
+   enables downloadlink <a [href]="url" target="_blank" rel="noopener">Download Me!</a>
+  </div> -->
+  
+  <!-- Enables Upload Controls
+  <button mat-stroked-button color="primary" (click)="task.pause()" class="button is-warning" [disabled]="!isActive(snap)">Pause</button>
+  <button mat-stroked-button color="primary" (click)="task.cancel()" class="button is-danger" [disabled]="!isActive(snap)">Cancel</button>
+  <button mat-stroked-button color="primary" (click)="task.resume()" class="button is-info"   [disabled]="!(snap?.state === 'paused')">Resume</button>
+</div>-->

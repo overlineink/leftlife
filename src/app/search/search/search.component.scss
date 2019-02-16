@@ -1,0 +1,54 @@
+.main-container {
+    margin: 75px auto;
+    position: relative;
+    text-align: center;
+}
+.content {
+    margin: auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.content-2 {
+    margin: auto;
+    text-align: left;
+    display: block;
+}
+
+.post-card {
+  max-width: 600px;
+  margin: 14px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+/*disbables the tab pagination of the tab bar*/
+ /deep/.mat-tab-label {
+  min-width: 0!important;
+  padding: 12px!important;
+  margin: auto!important;
+ }
+
+ /deep/.mat-tab-label-active{
+  min-width: 0!important;
+  padding: 0px!important;
+  margin: auto!important;
+ }
+
+@media (min-width: 450px) {
+  .post-card {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 600px;
+    }
+}

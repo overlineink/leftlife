@@ -1,0 +1,25 @@
+<mat-toolbar class="mat-elevation-z6 botton">
+  <mat-toolbar-row>
+    <span class="bar-center">
+      <a routerLink="/{{myGroup}}" routerLinkActive="active">
+        <mat-icon color="primary" matBadge="{{groupNotifications}}" matBadgeOverlap="false">place</mat-icon>
+      </a>
+    </span>
+    <span class="bar-center">
+      <a routerLink="/message" routerLinkActive="active">
+        <mat-icon color="primary" matBadge="{{messages}}" matBadgeOverlap="false">message</mat-icon>
+      </a>
+    </span>
+    <span class="bar-center">
+      <a routerLink="/notifications" routerLinkActive="active">
+        <mat-icon color="primary" matBadge="{{notifications}}" matBadgeOverlap="false">notifications</mat-icon>
+      </a>
+    </span>
+    <span class="bar-center">
+      <a routerLink="/{{myProfile}}" routerLinkActive="active">
+        <mat-icon color="primary">person</mat-icon>
+      </a>
+    </span>
+
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -10,8 +10,8 @@ export const environment = {
     databaseURL: 'https://leftlife1-e07e0.firebaseio.com',
     projectId: 'leftlife1-e07e0',
     storageBucket: 'leftlife1-e07e0.appspot.com',
-    messagingSenderId: '562551826629'
-  }
+    messagingSenderId: '562551826629',
+  },
 };
 
 /*

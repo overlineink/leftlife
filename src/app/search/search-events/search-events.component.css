@@ -1,0 +1,29 @@
+.primary {
+    color: #d50000;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .grid-item {
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .margin-top {
+    margin-top: 20px;
+  }

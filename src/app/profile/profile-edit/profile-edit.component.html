@@ -1,0 +1,18 @@
+<app-structure>
+    <ngx-auth-firebaseui-user (click)="onLogoutSuccess()"></ngx-auth-firebaseui-user>
+    <mat-card class="margin-top-14">
+        <div *ngIf="authService.user$ | async as user" class="center">
+            <h1>Profile Picture</h1>
+            <img [src]="user.profilePhoto">
+        </div>
+        
+        <app-file-upload class="margin-top-14"
+            zoneName="Profile Picture Drop Zone"
+            buttonName="Change Profile Picture"
+            previewName="New Profile Picture">
+        </app-file-upload>
+    </mat-card>
+    <mat-card class="margin-top-14">
+        <app-profile-form class="center"></app-profile-form>
+    </mat-card>
+</app-structure>
