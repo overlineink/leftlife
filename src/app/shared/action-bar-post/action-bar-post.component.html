@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="postMenu" class="margin-left-190">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #postMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>delete</mat-icon>
+    <span>Entfernen</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>warning</mat-icon>
+    <span>Melden</span>
+  </button>
+</mat-menu>

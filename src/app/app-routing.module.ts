@@ -7,6 +7,7 @@ import { LoggedInGuard } from 'ngx-auth-firebaseui';
 import { TestSharedComponent } from './shared/test-shared/test-shared.component';
 import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
 import { SearchComponent } from './search/search/search.component';
+import { TimelineComponent } from './timeline/timeline/timeline.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent,
+    // canActivate: [LoggedInGuard]
+  },
+  {
+    path: 'timeline',
+    component: TimelineComponent,
     // canActivate: [LoggedInGuard]
   },
   {

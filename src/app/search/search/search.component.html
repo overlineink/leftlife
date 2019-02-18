@@ -8,25 +8,24 @@
         <mat-form-field>
           <input class="center" matInput placeholder="Suche Themen">
         </mat-form-field>
-        <mat-chip-list>
-          <mat-chip>#Europa</mat-chip>
-          <mat-chip>#Digitales</mat-chip>
-          <mat-chip>#EU</mat-chip>
-        </mat-chip-list>
+        <br>
+        <app-hashtags-edit [hashtags]="hashtags"></app-hashtags-edit>
         <div>
           <p class="inline-block">heute</p>
           <mat-slider class="inline-block"></mat-slider>
           <p class="inline-block">alle</p>
         </div>
+        <button mat-raised-button color="primary">Search</button>
       </div>
     </mat-card>
-    <mat-card class="post-card">
+
+    <mat-card class="post-card a">
       <mat-tab-group>
         <mat-tab>
           <ng-template mat-tab-label>
             <mat-icon>select_all</mat-icon>
           </ng-template>
-          <app-search-all></app-search-all>
+        <app-search-all></app-search-all>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>

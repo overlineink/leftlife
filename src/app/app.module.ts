@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
 import { SearchModule } from './search/search.module';
+import { TimelineModule } from './timeline/timeline.module';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SearchModule } from './search/search.module';
     SharedModule,
     ProfileModule,
     SearchModule,
+    TimelineModule,
     AppRoutingModule
   ],
   providers: [],

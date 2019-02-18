@@ -11,6 +11,10 @@ body, html {
     text-align: center;
 }
 
+.justify {
+    justify-content: center;
+}
+
 .primary {
     color: #d50000;
 }

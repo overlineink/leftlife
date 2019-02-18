@@ -1,0 +1,51 @@
+<app-structure>
+<div *ngIf="posts">
+<mat-card class="post-card" *ngFor= "let post of posts">
+  <mat-card-header>
+    <img mat-card-avatar src="{{post.profImage}}" class="post-header-image" matTooltip="Profile Tobias Hassebrock">
+    <mat-card-title class="pointer">{{post.author}}</mat-card-title>
+    <mat-card-subtitle class="pointer">{{post.location}}</mat-card-subtitle>
+    <app-action-bar-post class="pointer right"></app-action-bar-post>
+  </mat-card-header>
+  <img mat-card-image src="{{post.image}}"
+  alt="Tobias Hassebrock" class="pointer" matTooltip="Idee Europäische Republik">
+  <mat-card-content>
+    <div class="inline">
+      <p class="pointer inline">{{post.likes}}</p>
+      <mat-icon class="margin-right pointer">favorite</mat-icon>
+      <mat-icon class="margin-right pointer">comment</mat-icon>
+      <app-action-bar></app-action-bar>
+      <div *ngIf="post.postType === 'idea'" class="inline float-right">
+        <mat-icon class="margin-right-14" color="primary">check_box</mat-icon>
+        <p class="inline primary pointer" matTooltip="Idee Europäische Republik">Idee</p>
+      </div>
+    </div>
+    <div class="">
+      <mat-chip-list class="inline-block" *ngFor="let hashtag of post.hashtags">
+          <mat-chip class="">#{{hashtag.hashtag}}</mat-chip>
+      </mat-chip-list>
+  </div>
+    <p>{{post.text}}</p>
+    <div *ngIf="collapsed">
+    <p >Diese muss auf der europäischen Ebene beschlossen werden</p>
+    <mat-card class="pink">
+        <div class="inline">
+            <p class="primary inline margin-right">Ellen Dietz</p>
+            <mat-card-subtitle class="inline">9:15</mat-card-subtitle>
+          </div>
+          <p>Hey,
+          kommst du morgen zu unser Sitzung? Wir müssen noch etwas für den Wahlkampf besprechen!
+          </p>
+        </mat-card>
+        <div class="center">
+            <mat-form-field class="width-co">
+              <input class="center" matInput placeholder="Kommentieren">
+            </mat-form-field>
+            <button class="center" mat-raised-button color="primary">Abschicken</button>
+          </div>
+      </div>
+    <button mat-button (click)="collapsed=!collapsed">Show more</button>
+  </mat-card-content>
+</mat-card>
+</div>
+</app-structure>

@@ -54,6 +54,8 @@ import { StatsComponent } from './stats/stats.component';
 import { HashtagsComponent } from './hashtags/hashtags.component';
 import { CardPhotoComponent } from './card-photo/card-photo.component';
 import { ActionBarComponent } from './action-bar/action-bar.component';
+import { ActionBarShareComponent } from './action-bar-share/action-bar-share.component';
+import { ActionBarPostComponent } from './action-bar-post/action-bar-post.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { ActionBarComponent } from './action-bar/action-bar.component';
     HashtagsComponent,
     CardPhotoComponent,
     ActionBarComponent,
+    ActionBarShareComponent,
+    ActionBarPostComponent,
   ],
   imports: [
     CommonModule,
@@ -115,6 +119,9 @@ import { ActionBarComponent } from './action-bar/action-bar.component';
   ],
   exports: [
     StructureComponent,
+    ActionBarComponent,
+    ActionBarPostComponent,
+    ActionBarShareComponent,
     ReactiveFormsModule,
     HashtagsEditComponent,
     HeaderFaceComponent,

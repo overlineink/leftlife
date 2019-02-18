@@ -32,6 +32,13 @@
   margin-top: 10px;
 }
 
+.a {
+  z-index: 200;
+}
+.a {
+  z-index: 400;
+}
+
 /*disbables the tab pagination of the tab bar*/
  /deep/.mat-tab-label {
   min-width: 0!important;

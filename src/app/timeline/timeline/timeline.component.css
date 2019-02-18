@@ -1,0 +1,53 @@
+.post-header-image {
+    cursor: pointer;
+  }
+  
+  .post-card {
+    max-width: 600px;
+    margin: 14px;
+  }
+  
+  .margin-right {
+    margin-right: 18px;
+  }
+  
+  .inline {
+    vertical-align: top;
+    display: inline;
+    font-size: 20px;
+  }
+  
+  .inline-block {
+    display: inline-flex;
+    margin-right: 5px;
+  }
+  
+  .primary {
+    color: #d50000;
+  }
+  
+  .float-right {
+    float: right;
+  }
+  
+  .margin-left-175 {
+    margin-left: 40px;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  .right {
+    text-align: right;
+    float: right;
+    display: inline;
+  }
+  
+  .width-co {
+    width: 100%;
+  }
+  
+  .center {
+    text-align: center;
+  }
