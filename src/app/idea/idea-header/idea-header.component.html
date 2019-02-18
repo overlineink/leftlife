@@ -1,0 +1,62 @@
+<mat-card class="post-card">
+  <div>
+    <mat-icon class="margin-right pointer text-bottom
+    inline-block" color="primary">arrow_back</mat-icon>
+    <p class="primary font-size margin-top inline-block">Europäische Republik</p>
+  </div>
+  <mat-card-header>
+    <div mat-card-avatar class="post-header-image" matTooltip="Profile Tobias Hassebrock"></div>
+    <mat-card-title class="pointer">Tobias Hassebrock</mat-card-title>
+    <mat-card-subtitle class="pointer">OV Rosbach</mat-card-subtitle>
+    <app-action-bar-post class="pointer right"></app-action-bar-post>
+  </mat-card-header>
+  <div class="center">
+    <div class="inline-block center">
+      <h3 class="primary no-margin-bot no-margin-top">20</h3>
+      <p class="no-margin-top">Unterstützer</p>
+    </div>
+    <div class="inline-block center padding">
+      <h3 class="primary no-margin-bot no-margin-top">167</h3>
+      <p class="no-margin-top">Likes</p>
+    </div>
+  </div>
+  <img mat-card-image src="assets/img/Europa.jpg"
+  alt="Tobias Hassebrock" class="pointer" matTooltip="Idee Europäische Republik">
+  <mat-card-content class="center">
+    <div class="inline">
+      <mat-icon class="margin-right pointer">favorite</mat-icon>
+      <mat-icon class="margin-right pointer">comment</mat-icon>
+      <app-action-bar-share class="margin-right"></app-action-bar-share>
+      <mat-icon class="margin-right pointer">map</mat-icon>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="post-card">
+  <mat-card-content class="center">
+    <mat-chip-list>
+      <mat-chip>#Europa</mat-chip>
+      <mat-chip>#Republik</mat-chip>
+      <mat-chip>#EU</mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+  <mat-card-content class="center margin-top-14">
+    <video width="100%" controls></video>
+  </mat-card-content>
+  <mat-card-content class="center margin-top-14">
+    <div class="inline">
+      <mat-icon class="margin-right pointer">favorite</mat-icon>
+      <mat-icon class="margin-right pointer">comment</mat-icon>
+      <app-action-bar-share class="margin-right"></app-action-bar-share>
+      <mat-icon class="margin-right pointer">map</mat-icon>
+    </div>
+  </mat-card-content>
+  <mat-card-content>
+    <p>Wir fordern eine europäische Republik, die in einer globalisierten Welt
+    wirtschaft für Gerechtigkeit sorgt.</p>
+    <p *ngIf="collapsed">Diese muss auf der europäischen Ebene beschlossen werden</p>
+    <div>
+      <button mat-button class="inline-block" (click)="collapsed=!collapsed">Show more</button>
+      <button mat-button class="inline-block">Text bearbeiten</button>
+    </div>
+  </mat-card-content>
+</mat-card>

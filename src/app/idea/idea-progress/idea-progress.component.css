@@ -1,0 +1,37 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .grid-item {
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .post-card {
+    max-width: 600px;
+    margin: 14px;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .wrapper {
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  
+    .font-size {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  
+    @media (max-width: 450px) {
+      .wrapper {
+          margin-right: 14px;
+          margin-left: 14px;
+      }
+    }
+  

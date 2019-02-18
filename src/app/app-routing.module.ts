@@ -8,6 +8,7 @@ import { TestSharedComponent } from './shared/test-shared/test-shared.component'
 import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
 import { SearchComponent } from './search/search/search.component';
 import { TimelineComponent } from './timeline/timeline/timeline.component';
+import { IdeaComponent } from './idea/idea/idea.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
   {
     path: 'timeline',
     component: TimelineComponent,
+    // canActivate: [LoggedInGuard]
+  },
+  {
+    path: 'idea',
+    component: IdeaComponent,
     // canActivate: [LoggedInGuard]
   },
   {

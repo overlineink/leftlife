@@ -1,0 +1,16 @@
+.main-container {
+    margin: 55px auto;
+    position: relative;
+    text-align: center;
+}
+.content {
+    margin: auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.content-2 {
+    margin: auto;
+    text-align: left;
+    display: block;
+}

@@ -9,6 +9,7 @@ import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
 import { SearchModule } from './search/search.module';
 import { TimelineModule } from './timeline/timeline.module';
+import { IdeaModule } from './idea/idea.module';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { TimelineModule } from './timeline/timeline.module';
     ProfileModule,
     SearchModule,
     TimelineModule,
+    IdeaModule,
     AppRoutingModule
   ],
   providers: [],
