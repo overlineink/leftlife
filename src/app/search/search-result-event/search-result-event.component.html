@@ -1,0 +1,50 @@
+<mat-card-header class="center justify">
+  <mat-card-title>{{eventTitle}}</mat-card-title>
+  <mat-card-subtitle>{{eventHost}}</mat-card-subtitle>
+</mat-card-header>
+<img *ngIf="eventImage" mat-card-image src={{eventImage}} alt="Photo of the {{eventTitle}}" width="200px">
+
+<mat-card-content>
+  <app-stats
+    [label1]="participants"
+    [label2]="tasks"
+    [label3]="topics"
+    [label4]="ideas"
+    [number1]="eventParticipants"
+    [number2]="eventTasksTot"
+    [number3]="eventTopicsTot"
+    [number4]="eventIdeasTot">
+  </app-stats>
+    <div class="grid-container">
+        <div class="grid-item">
+          <mat-icon>person</mat-icon>
+        </div>
+        <div class="grid-item">
+          <p>{{eventModerator}}</p>
+        </div>
+        <div class="grid-item">
+          <mat-icon>event</mat-icon>
+        </div>
+        <div class="grid-item">
+          <p>{{convertedDate | date: 'MMM d, y, HH:mm' }}</p>
+        </div>
+        <div class="grid-item">
+          <mat-icon>place</mat-icon>
+        </div>
+        <div class="grid-item">
+          <p>{{eventLocation.postCode}} {{eventLocation.city}} - 
+            {{eventLocation.street}} {{eventLocation.houseNumber}} - 
+            {{eventLocation.additionalInformation}}</p>
+        </div>
+        <div class="grid-item">
+          <mat-icon>work</mat-icon>
+        </div>
+        <div class="grid-item">
+          <app-hashtags [hashtags]="eventHashtags"></app-hashtags>
+        </div>
+      </div>
+</mat-card-content>
+<mat-card-actions class="center">
+  <button mat-button>LIKE</button>
+  <button mat-button>SHARE</button>
+</mat-card-actions>

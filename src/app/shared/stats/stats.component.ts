@@ -12,6 +12,8 @@ export class StatsComponent implements OnInit {
   @Input() number2: string;
   @Input() label3: string;
   @Input() number3: string;
+  @Input() label4: string;
+  @Input() number4: string;
 
   constructor() { }
 

@@ -1,0 +1,25 @@
+<mat-card class="margin-top-14">
+    <mat-card-content>
+        <h2 class="primary">Idea</h2>
+        <p>{{ideaText}}</p>
+        <p *ngIf="collapsed">Diese muss auf der europäischen Ebene beschlossen werden</p>
+        <div>
+          <button mat-button class="inline-block" (click)="collapsed=!collapsed">Show more</button>
+          <button mat-button class="inline-block">Text bearbeiten</button>
+        </div>
+      </mat-card-content>
+</mat-card>
+
+  <mat-card class="margin-top-14">
+      <mat-card-content>
+          <h2 class="primary">Reasons</h2>
+          <p>{{ideaText}}</p>
+          <p *ngIf="collapsed">Diese muss auf der europäischen Ebene beschlossen werden</p>
+          <div>
+            <button mat-button class="inline-block" (click)="collapsed=!collapsed">Show more</button>
+            <button mat-button class="inline-block">Text bearbeiten</button>
+          </div>
+        </mat-card-content>
+  </mat-card>
+
+  

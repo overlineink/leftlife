@@ -1,0 +1,164 @@
+<div class="center">
+    <app-filter></app-filter>
+  </div>
+  <mat-list *ngIf="tasks">
+      <mat-list-item>
+        <mat-checkbox class="margin-right"></mat-checkbox>
+        <p class="font-size-12 task-margin">Stadt Hamburg nach Erfahrungen im sozialen Wohnungsbau fragen</p>
+        <img mat-card-avatar class="no-margin-bot no-margin-top avatar inline-block margin-right-2" src="assets/img/Tobi.jpg" alt="Desc 1">
+        <p class="font-size-12">Thomas Kraft</p>
+      </mat-list-item>
+    </mat-list>
+  <nav class="center">
+    <span class="bar-center inline-block margin-right">
+      <a (click)="tasks=!tasks" class="primary">
+        <mat-icon class="inline-block middle margin-right-icon">assignment</mat-icon>
+        <p class="inline-block">Aufgaben</p>
+      </a>
+    </span>
+    <span class="bar-center inline-block">
+      <a routerLink="/message" class="primary">
+        <mat-icon class="inline-block middle margin-right-icon">cloud</mat-icon>
+        <p class="inline-block">Cloud</p>
+      </a>
+    </span>
+  </nav>
+  <mat-divider></mat-divider>
+    <div class="content">
+      <!--<mat-card class="post-card wrapper">
+        <mat-list class="inline-block">
+          <mat-icon class="margin-right margin-right headline pointer text-bottom
+          inline-block" color="primary">arrow_back</mat-icon>
+          <img class="inline-block margin-right headline" mat-card-avatar src="assets/img/Tobi.jpg" alt="Desc 1">
+          <h3 mat-line class="inline-block primary headline">Ellen Dietz</h3>
+      </mat-card>-->
+      <mat-card class="post-card wrapper margin-top">
+        <div class="right">
+          <div class="inline">
+            <p class="primary inline margin-right">Ellen Dietz</p>
+            <mat-card-subtitle class="inline">9:15</mat-card-subtitle>
+          </div>
+          <p>Hey,
+          kommst du morgen zu unser Sitzung? Wir müssen noch etwas für den Wahlkampf besprechen!
+          </p>
+          <button class="inline" mat-button (click)="comment=!comment">Kommentare</button>
+          <div *ngIf="comment">
+            <mat-card class="pink">
+            <div class="inline">
+                <p class="primary inline margin-right">Ellen Dietz</p>
+                <mat-card-subtitle class="inline">9:15</mat-card-subtitle>
+              </div>
+              <p>Hey,
+              kommst du morgen zu unser Sitzung? Wir müssen noch etwas für den Wahlkampf besprechen!
+              </p>
+            </mat-card>
+            <div class="center">
+                <mat-form-field class="width-co">
+                  <input class="center" matInput placeholder="Kommentieren">
+                </mat-form-field>
+                <button class="center" mat-raised-button color="primary">Abschicken</button>
+              </div>
+          </div>
+  
+        </div>
+      </mat-card>
+      <mat-card class="post-card wrapper margin-top">
+          <div class="right">
+            <div class="inline">
+              <p class="primary inline margin-right">Ellen Dietz</p>
+              <mat-card-subtitle class="inline">9:15</mat-card-subtitle>
+            </div>
+            <p>Hey,
+            kommst du morgen zu unser Sitzung? Wir müssen noch etwas für den Wahlkampf besprechen!
+            </p>
+            <button class="inline" mat-button (click)="comment=!comment">Kommentare</button>
+            <div *ngIf="comment">
+              <mat-card class="pink">
+              <div class="inline">
+                  <p class="primary inline margin-right">Ellen Dietz</p>
+                  <mat-card-subtitle class="inline">9:15</mat-card-subtitle>
+                </div>
+                <p>Hey,
+                kommst du morgen zu unser Sitzung? Wir müssen noch etwas für den Wahlkampf besprechen!
+                </p>
+              </mat-card>
+              <div class="center">
+                  <mat-form-field class="width-co">
+                    <input class="center" matInput placeholder="Kommentieren">
+                  </mat-form-field>
+                  <button class="center" mat-raised-button color="primary">Abschicken</button>
+                </div>
+            </div>
+    
+          </div>
+        </mat-card>
+  
+  <!--<form class="margin-bot">
+    <mat-form-field class="width">
+      <input matInput placeholder="Schreibe etwas">
+    </mat-form-field>
+    <nav class="center">
+      <button mat-raised-button color="accent" routerLink="/timeline"
+      class="margin-right">Upload</button>
+      <button mat-raised-button color="primary" routerLink="/timeline">Posten</button>
+    </nav>
+  </form>
+  <mat-divider></mat-divider>
+  <nav class="center">
+    <span class="bar-center inline-block margin-right">
+      <a routerLink="/localgroup" class="primary">
+        <mat-icon class="inline-block middle margin-right-icon">assignment</mat-icon>
+        <p class="inline-block">Aufgaben</p>
+      </a>
+    </span>
+    <span class="bar-center inline-block">
+      <a routerLink="/message" class="primary">
+        <mat-icon class="inline-block middle margin-right-icon">cloud</mat-icon>
+        <p class="inline-block">Cloud</p>
+      </a>
+    </span>
+  </nav>
+  <mat-divider></mat-divider>
+  
+  
+  <mat-card-header class="margin-top margin-left-minus">
+    <mat-card>
+      <div class="margin-bot">
+        <div mat-card-avatar class="post-header-image inline-block" matTooltip="Profile Tobias Hassebrock"></div>
+        <mat-card-title class="pointer inline-block vertical-align margin-left" >Tobias Hassebrock</mat-card-title>
+        <app-button-post-menu class=" vertical-align inline-block line-height"> </app-button-post-menu>
+      </div>
+      <mat-card-subtitle class="pointer">Morgen ist Vorstandssitzung. Es wird um die aktuellen Entwicklungen
+        im Baugebiet Sang und um einen Antrag zur Europäischen Union gehen. Freuen
+        uns auf viele Gesichter</mat-card-subtitle>
+      <mat-card-content>
+        <div class="inline">
+          <p class="margin-right-5 inline-block">45</p>
+          <mat-icon class="margin-right middle pointer">favorite</mat-icon>
+          <mat-icon class="margin-right middle pointer">comment</mat-icon>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-header>
+  <mat-card-header class="margin-top margin-left-card">
+    <mat-card>
+      <div class="margin-bot">
+        <div mat-card-avatar class="post-header-image inline-block" matTooltip="Profile Tobias Hassebrock"></div>
+        <mat-card-title class="pointer inline-block vertical-align margin-left" >Tobias Hassebrock</mat-card-title>
+        <app-button-post-menu class=" vertical-align inline-block line-height"> </app-button-post-menu>
+      </div>
+      <mat-card-subtitle class="pointer">Bin dabei. Kommst du auch Hans Peter Ratjens
+      um uns vom neuesten Stand der Haushaltsplanungen zu berichten?</mat-card-subtitle>
+      <mat-divider></mat-divider>
+      <div class="margin-bot">
+        <div mat-card-avatar class="post-header-image inline-block" matTooltip="Profile Tobias Hassebrock"></div>
+        <mat-card-title class="pointer inline-block vertical-align margin-left" >Tobias Hassebrock</mat-card-title>
+        <app-button-post-menu class=" vertical-align inline-block line-height"> </app-button-post-menu>
+      </div>
+      <mat-card-subtitle class="pointer">Bin dabei. Kommst du auch Hans Peter Ratjens
+      um uns vom neuesten Stand der Haushaltsplanungen zu berichten?</mat-card-subtitle>
+  
+    </mat-card>
+  </mat-card-header>-->
+  
+  

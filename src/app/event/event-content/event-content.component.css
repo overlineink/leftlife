@@ -1,0 +1,64 @@
+.post-card {
+    max-width: 600px;
+    margin: 14px;
+  }
+  
+  .post-header-image {
+    background-image: url('/assets/img/Tobi.jpg');
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+  .avatar {
+    height: 20px;
+    width: 20px;
+    vertical-align: sub;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .no-margin-top {
+    margin-top: 0px!important;
+  }
+  
+  .no-margin-bot {
+    margin-bottom: 0px!important;
+  }
+  
+  .padding{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .primary {
+    color: #d50000;
+  }
+  
+  .margin-right {
+    margin-right: 10px;
+  }
+  
+  .font-size-12 {
+    font-size: 12px;
+  }
+  
+  .margin-right-2 {
+    margin-right: 4px;
+  }
+  @media (min-width: 450px) {
+    .post-card {
+        margin-right: auto;
+        margin-left: auto;
+      }
+  
+    .task-margin {
+      margin-right: 20px;
+    }
+  }
+  

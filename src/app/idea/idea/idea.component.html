@@ -1,4 +1,53 @@
 <app-structure>
-  <app-idea-header></app-idea-header>
-  <app-idea-progress></app-idea-progress>
+  <mat-card>
+    <div class="container">
+      <img src="{{ideaImage}}" width="100%">
+      <p class="title">{{ideaTitle}}</p>
+     <!-- <p class="subtitle">{{ideaSubtitle}}</p>-->
+    </div>
+
+       <app-stats class="margin-top-14"
+        [label1]="'Likes'"
+        [label2]="'Supporter'"
+        [label3]="'Proposals'"
+        [number1]="likes"
+        [number2]="supporters"
+        [number3]="proposals">
+      </app-stats>
+
+      <div class="center">
+        <app-hashtags [hashtags]="ideaHashtags"></app-hashtags>
+      </div>
+
+      <h3 class="primary margin-0 center">Written by</h3>
+      <app-header-face
+      [local]="local"
+      [regional]="regional"
+      [federal]="federal"
+      [continental]="continental"
+
+      [name]="name"
+      [profilePhoto]="profilePhoto">
+    </app-header-face>
+  </mat-card>
+
+  <mat-card class="margin-top-14 center">
+    <app-idea-video [ideaVideo]="ideaVideo"></app-idea-video>
+    <app-action-bar-share-map></app-action-bar-share-map>
+  </mat-card>
+
+  <mat-card class="margin-top-14">
+    <app-idea-content
+     [ideaText]="ideaText"
+     [ideaReason]="ideaReason"></app-idea-content>
+  </mat-card>
+
+  <mat-card class="margin-top-14">
+      <app-idea-progress class="margin-top-14"
+      [localEvent]="localEvent"
+      [districtEvent]="districtEvent"
+      [regionalEvent]="regionalEvent"
+      [federalEvent]="federalEvent">
+    </app-idea-progress>
+  </mat-card>
 </app-structure>

@@ -9,6 +9,9 @@ import { ProfileEditComponent } from './profile/profile-edit/profile-edit.compon
 import { SearchComponent } from './search/search/search.component';
 import { TimelineComponent } from './timeline/timeline/timeline.component';
 import { IdeaComponent } from './idea/idea/idea.component';
+import { ServiceTestComponent } from './core/services/service-test/service-test.component';
+import { EventComponent } from './event/event/event.component';
+import { GroupComponent } from './group/group/group.component';
 
 const routes: Routes = [
   {
@@ -34,6 +37,21 @@ const routes: Routes = [
   {
     path: 'idea',
     component: IdeaComponent,
+    // canActivate: [LoggedInGuard]
+  },
+  {
+    path: 'servicetest',
+    component: ServiceTestComponent,
+    // canActivate: [LoggedInGuard]
+  },
+  {
+    path: 'event',
+    component: EventComponent,
+    // canActivate: [LoggedInGuard]
+  },
+  {
+    path: 'group',
+    component: GroupComponent,
     // canActivate: [LoggedInGuard]
   },
   {

@@ -1,0 +1,27 @@
+<app-header-face-no-loc class="justify center"
+  [userRank]="userRank"
+  [profilePhoto]="profilePhoto"
+  [name]="name">
+</app-header-face-no-loc>
+<div class="grid-container">
+    <div class="grid-item">
+      <mat-icon>work</mat-icon>
+    </div>
+    <div class="grid-item">
+      <app-hashtags [hashtags]="hashtags"></app-hashtags>
+    </div>
+    <div class="grid-item">
+        <mat-icon>assignment</mat-icon>
+      </div>
+      <div class="grid-item">
+        <p class="">{{ideas}}</p>
+      </div>
+      <div class="grid-item">
+          <mat-icon>place</mat-icon>
+        </div>
+        <div class="grid-item">
+          <p>{{local}} - {{regional}} - 
+            {{federal}} - {{continental}}
+            </p>
+        </div>
+  </div>

@@ -11,7 +11,7 @@ export class HeaderFaceComponent implements OnInit {
   @Input() regional: string;
   @Input() federal: string;
   @Input() continental: string;
-  @Input() photoURL: string;
+  @Input() profilePhoto: string;
   constructor() { }
 
   ngOnInit() {

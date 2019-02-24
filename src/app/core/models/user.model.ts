@@ -4,5 +4,21 @@ export interface User {
     photoURL?: string;
     profilePhoto?: string;
     displayName?: string;
-    myCustomData?: string;
+    userRank?: string;
+
+    local: string;
+    regional: string;
+    federal: string;
+    continental: string;
+
+    followers: string;
+    following: string;
+    ideas: string;
+    hashtags: string[];
+
+    // position
+}
+
+export interface Person extends User {
+    id: string;
 }

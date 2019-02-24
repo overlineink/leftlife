@@ -1,12 +1,19 @@
 export interface Idea {
     // attributes of the idea
-    ideaID: string;
-    location: string;
-    image: string;
-    video: string;
-    text: string;
-    hashtags?: Object[];
-    date?: string;
+    ideaTitle?: string;
+    ideaImage?: string;
+    ideaVideo?: string;
+    ideaText?: string;
+    ideaReason?: string;
+    ideaHashtags?: string[];
+    ideaDate?: string;
+    ideaLocation?: string;
+    ideaAuthor?: {
+      authorID?: string,
+      authorImage?: string;
+      authorName?: string;
+    };
+   // from Author
 
     // User operations
     // 1. Like the Idea
@@ -14,38 +21,6 @@ export interface Idea {
     // 3. Add Comments
     // 4. Add Proposals
     // 5. Groups can support an idea
-
-    // attributes of connected objects
-    /*
-    author: UserID[];
-    comments: CommentID[];
-    proposals: ProposalID[];
-    events: EventID[];
-    likes: UserID[];
-    supporterGroups: GroupID[];
-*/
-    // the idea has an author
-    userID: string;
-    userName: string;
-    userImage: string;
-
-    // user can add comments
-    commentID: string;
-    commentAuthorName: string; // userName
-    commentAuthorID: string; // userID
-    commentAuthorImage: string; // userImage
-
-    // user can add proposals how to change the idea
-    proposalID: string;
-    proposalAuthorName: string; // userName
-    proposalAuthorID: string; // userID
-    proposalAuthorImage: string; // userImage
-
-    // user discuss the idea at real life events
-    eventID: string;
-    eventAuthorName: string; // userName
-    eventAuthorID: string; // userID
-    eventAuthorImage: string; // userImage
 
     // regular search operations
     // 1. User searches for IdeaNames (SearchComponent)
@@ -57,5 +32,60 @@ export interface Idea {
     // 7. App asks for ideas with most likes
     // 8. App asks for ideas with the most supportiveGroups
 
+    // Additional ideaAttributes due to user operations
+  /*  author: UserID;
+    comments: CommentID[];
+    proposals: ProposalID[];
+    events: EventID[];
+    likes: UserID[];
+    supporterGroups: GroupID[]; */
+
+    // the idea has an author
+    // query idea collection to retrieve
+ /*   userID?: string;
+    userName?: string;
+    userImage?: string; */
+
+    // user can add comments
+    // query comment collection to retrieve
+/*    commentID?: string;
+    commentText?: string;
+    commentAuthorName?: string;
+    commentAuthorID?: string;
+    commentAuthorImage?: string; */
+
+    // user can add proposals how to change the idea
+    // query proposal collection to retrieve
+/*    proposalID?: string;
+    proposalText?: string;
+    proposalAuthorName?: string;
+    proposalAuthorID?: string;
+    proposalAuthorImage?: string;*/
+
+    // user discuss the idea at real life events
+    // query event collection to retrieve
+/*    eventID?: string;
+    eventAuthorName?: string;
+    eventAuthorID?: string;
+    eventAuthorImage?: string;*/
+
+    // user can like the idea
+    // query user collection to retrieve
+  /*  userID: string;
+    userName: string;
+    userImage: string;*/
+
+    // groups can support the idea
+    // query groups collection to retrieve
+/*
+    groupID?: string;
+    groupName?: string;
+    groupImage?: string;
+
+    */
+
+
 }
+
+export interface IdeaID extends Idea { id: string; }
 

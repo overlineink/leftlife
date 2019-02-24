@@ -1,0 +1,67 @@
+.post-header-image {
+    background-image: url('/assets/img/Tobi.jpg');
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .margin-top {
+    margin: 20px;
+  }
+  
+  .divider-margin-bot {
+    margin-bottom: 14px;
+  }
+  .wrapper {
+      max-width: 600px;
+      margin: auto;
+      padding: 14px;
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .margin {
+    margin: 0 auto;
+    width: 50px;
+  }
+  
+  .post-card {
+    max-width: 600px;
+    margin: 14px;
+  }
+  
+  .post-header-image {
+    background-image: url('/assets/img/Tobi.jpg');
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .padding{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .padding-right {
+    padding-right: 10px;
+  }
+  .primary {
+    color: #d50000;
+  }
+  
+  .no-margin-top {
+    margin-top: 0px!important;
+  }
+  
+  .no-margin-bot {
+    margin-bottom: 0px!important;
+  }
+  
+  .margin-right-icon {
+    margin-right: 5px;
+  }
+  

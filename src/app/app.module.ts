@@ -10,6 +10,9 @@ import { SharedModule } from './shared/shared.module';
 import { SearchModule } from './search/search.module';
 import { TimelineModule } from './timeline/timeline.module';
 import { IdeaModule } from './idea/idea.module';
+import { EventModule } from './event/event.module';
+import { GroupComponent } from './group/group/group.component';
+import { GroupModule } from './group/group.module';
 
 
 @NgModule({
@@ -26,6 +29,8 @@ import { IdeaModule } from './idea/idea.module';
     SearchModule,
     TimelineModule,
     IdeaModule,
+    EventModule,
+    GroupModule,
     AppRoutingModule
   ],
   providers: [],

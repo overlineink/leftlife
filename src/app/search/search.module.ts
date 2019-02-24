@@ -3,20 +3,18 @@ import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
-import { SearchAllComponent } from './search-all/search-all.component';
-import { SearchPersonsComponent } from './search-persons/search-persons.component';
-import { SearchEventsComponent } from './search-events/search-events.component';
-import { SearchGroupsComponent } from './search-groups/search-groups.component';
-import { SearchIdeasComponent } from './search-ideas/search-ideas.component';
+import { SearchResultIdeaComponent } from './search-result-idea/search-result-idea.component';
+import { SearchResultPersonComponent } from './search-result-person/search-result-person.component';
+import { SearchResultEventComponent } from './search-result-event/search-result-event.component';
+import { SearchResultGroupComponent } from './search-result-group/search-result-group.component';
 
 @NgModule({
   declarations: [
     SearchComponent,
-    SearchAllComponent,
-    SearchPersonsComponent,
-    SearchEventsComponent,
-    SearchGroupsComponent,
-    SearchIdeasComponent
+    SearchResultIdeaComponent,
+    SearchResultPersonComponent,
+    SearchResultEventComponent,
+    SearchResultGroupComponent
   ],
   imports: [
     CommonModule,

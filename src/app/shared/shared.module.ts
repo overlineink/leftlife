@@ -56,6 +56,8 @@ import { CardPhotoComponent } from './card-photo/card-photo.component';
 import { ActionBarComponent } from './action-bar/action-bar.component';
 import { ActionBarShareComponent } from './action-bar-share/action-bar-share.component';
 import { ActionBarPostComponent } from './action-bar-post/action-bar-post.component';
+import { ActionBarShareMapComponent } from './action-bar-share-map/action-bar-share-map.component';
+import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-loc.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { ActionBarPostComponent } from './action-bar-post/action-bar-post.compon
     ActionBarComponent,
     ActionBarShareComponent,
     ActionBarPostComponent,
+    ActionBarShareMapComponent,
+    HeaderFaceNoLocComponent,
   ],
   imports: [
     CommonModule,
@@ -122,9 +126,11 @@ import { ActionBarPostComponent } from './action-bar-post/action-bar-post.compon
     ActionBarComponent,
     ActionBarPostComponent,
     ActionBarShareComponent,
+    ActionBarShareMapComponent,
     ReactiveFormsModule,
     HashtagsEditComponent,
     HeaderFaceComponent,
+    HeaderFaceNoLocComponent,
     StatsComponent,
     CardPhotoComponent,
     HashtagsComponent,

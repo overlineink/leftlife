@@ -25,31 +25,99 @@
           <ng-template mat-tab-label>
             <mat-icon>select_all</mat-icon>
           </ng-template>
-        <app-search-all></app-search-all>
+          <mat-card>
+            <mat-card *ngFor="let idea of ideas$ | async" class="margin-top-14">
+              <app-search-result-idea
+                [ideaTitle]="idea.ideaTitle"
+                [ideaLocation]="idea.ideaLocation"
+                [ideaAuthorName]="idea.ideaAuthor.authorName"
+                [ideaDate]="idea.ideaDate"
+                [ideaHashtags]="idea.ideaHashtags"
+                [ideaImage]="idea.ideaImage">
+              </app-search-result-idea>
+            </mat-card>
+          </mat-card>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
             <mat-icon>person</mat-icon>
           </ng-template>
-          <app-search-persons></app-search-persons>
+          <mat-card>
+              <mat-card *ngFor="let person of persons$ | async" class="margin-top-14">
+                <app-search-result-person
+                  [local]="person.local"
+                  [regional]="person.regional"
+                  [federal]="person.federal"
+                  [continental]="person.continental"
+
+                  [name]="person.displayName"
+                  [profilePhoto]="person.profilePhoto"
+                  [hashtags]="person.hashtags"
+                  [ideas]="person.ideas"
+                  [userRank]="person.userRank">
+                </app-search-result-person>
+              </mat-card>
+            </mat-card>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
             <mat-icon>assignment</mat-icon>
           </ng-template>
-          <app-search-ideas></app-search-ideas>
+          <mat-card>
+              <mat-card *ngFor="let idea of ideas$ | async" class="margin-top-14">
+                <app-search-result-idea
+                  [ideaTitle]="idea.ideaTitle"
+                  [ideaLocation]="idea.ideaLocation"
+                  [ideaAuthorName]="idea.ideaAuthor.authorName"
+                  [ideaDate]="idea.ideaDate"
+                  [ideaHashtags]="idea.ideaHashtags"
+                  [ideaImage]="idea.ideaImage">
+                </app-search-result-idea>
+              </mat-card>
+            </mat-card>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
             <mat-icon>groups</mat-icon>
           </ng-template>
-          <app-search-groups></app-search-groups>
+          <mat-card>
+              <mat-card *ngFor="let group of groups$ | async" class="margin-top-14">
+                <app-search-result-group
+                [groupTitle]="group.groupTitle"
+                [groupLevel]="group.groupLevel"
+                [groupImage]="group.groupImage"
+                [groupLeader]="group.groupLeader"
+              
+                [groupHashtags]="group.groupHashtags"
+                [groupIdeasTot]="group.groupIdeasTot"
+                [groupEventsTot]="group.groupEventsTot"
+                [groupMembersTot]="group.groupMembersTot"
+                [groupFollowersTot]="group.groupFollowersTot">
+              </app-search-result-group>
+              </mat-card>
+            </mat-card>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
             <mat-icon>event</mat-icon>
           </ng-template>
-          <app-search-events></app-search-events>
+          <mat-card>
+            <mat-card *ngFor="let event of events$ | async" class="margin-top-14">
+              <app-search-result-event
+                [eventDate]="event.eventDate"
+                [eventTitle]="event.eventTitle"
+                [eventHost]="event.eventHost"
+                [eventImage]="event.eventImage"
+                [eventHashtags]="event.eventHashtags"
+                [eventModerator]="event.eventModerator"
+                [eventTasksTot]="event.eventTasksTot"
+                [eventTopicsTot]="event.eventTopicsTot"
+                [eventIdeasTot]="event.eventIdeasTot"
+                [eventParticipants]="event.eventParticipants"
+                [eventLocation]="event.eventLocation">
+              </app-search-result-event>
+            </mat-card>
+          </mat-card>
         </mat-tab>
       </mat-tab-group>
     </mat-card>

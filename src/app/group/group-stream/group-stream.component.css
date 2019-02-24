@@ -1,0 +1,192 @@
+.post-card {
+    margin-left: 14px;
+    max-width: 600px;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .main-container {
+      margin: 75px auto;
+      position: relative;
+      text-align: center;
+  }
+  .content {
+      margin: 1px;
+      text-align: left;
+      display: block;
+  }
+  
+  .primary {
+    color: #d50000;
+  }
+  
+  .inline {
+    display: inline;
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+  .headline {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  
+  .margin-right {
+    margin-right: 10px;
+  }
+  
+  .margin-top {
+    margin-top: 14px;
+  }
+  
+  .margin-left {
+    margin-left: 16px;
+  }
+  .pink {
+    background-color: #fef4f3;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+  .width {
+    width: 200px;
+  }
+  
+  .width-co {
+    width: 100%;
+  }
+  .botton {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    z-index: 1000;
+    width: 100%;
+    margin-bottom: 55px;
+  }
+  
+  .inline-block {
+    display: inline;
+  }
+  mat-card {
+    padding: 8px;
+    margin: 0px;
+  }
+  
+  mat-card-subtitle {
+    margin: 0px;
+  }
+  
+  p {
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+  
+  @media (min-width: 375px) {
+    .width {
+      width: 250px;
+    }
+  }
+  
+  @media (min-width: 425px) {
+    .width {
+      width: 300px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .width {
+      width: 643px;
+    }
+  }
+  
+  @media (min-width:  1024px) {
+    .width {
+      width: 899px;
+    }
+  }
+  
+  @media (min-width:  1440px) {
+    .width {
+      width: 1315px;
+    }
+  }
+  
+  /*.margin-top {
+    margin-top: 40px;
+  }
+  
+  .margin-left-minus {
+    margin-left: -15px;
+  }
+  
+  
+  .margin-left-card {
+    margin-left: 6px;
+    margin-top: -20px;
+  }
+  
+  .post-header-image {
+    background-image: url('/assets/img/Tobi.jpg');
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .width {
+    width: 100%;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .margin-right {
+    margin-right: 14px;
+  }
+  
+  .margin-bot {
+    margin-bottom: 20px;
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+  .vertical-align {
+    vertical-align: text-bottom;
+  }
+  
+  .middle {
+    vertical-align: middle;
+  }
+  .line-height {
+    line-height: 55px;
+  }
+  
+  .margin-left {
+    margin-left: 10px;
+  }
+  
+  .margin-right-5 {
+    margin-right: 5px;
+  }
+  
+  .primary {
+    color: #d50000;
+  }
+  
+  .margin-right-icon {
+    margin-right: 2px;
+  }
+  */
+  

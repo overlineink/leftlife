@@ -10,7 +10,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class AuthService {
   user$: Observable<User>;
-  user: User;
+  user: any;
   userID: string;
 
   constructor(
@@ -32,15 +32,15 @@ export class AuthService {
       })
     );
   }
-  // subscribes to User$ and saves the UserID
+  // subscribes to the logged in User$ and saves the UserID
   getUserID() {
-    console.log('I am ' + this.user$);
+    // console.log('I am ' + this.user$);
     this.angularFireAuth.authState.subscribe(user$ => {
       if (user$) {
         this.userID = user$.uid;
         this.user = user$;
-        console.log(this.user);
-        console.log('saved id: ' + this.userID);
+        // console.log(this.user);
+        // console.log('saved id: ' + this.userID);
       } else {
       }
     });
@@ -48,24 +48,6 @@ export class AuthService {
 
   updateUser(data: any) {
     this.angularFirestore.doc<User>(`users/${this.userID}`).update(data);
-  }
-
-  private updateUserData(user) {
-    // Sets user data to firestore on login =
-    const userRef: AngularFirestoreDocument<User> = this.angularFirestore.doc(`users/${user.uid}`);
-
-    const data = {
-      uid: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-      // photoURL: user.photoURL
-    };
-    return userRef.set(data, {merge: true});
-  }
-
-  logger() {
-    console.log('user:' + this.user$);
-    console.log('userID:' + this.userID);
   }
 
 }

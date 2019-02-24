@@ -11,9 +11,17 @@ import { DropZoneDirective } from './drop-zone.directive';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FileSizePipe } from './file-size.pipe';
+import { ServiceTestComponent } from './services/service-test/service-test.component';
 
 @NgModule({
-  declarations: [AuthentificationComponent, PageNotFoundComponent, DropZoneDirective, FileUploadComponent, FileSizePipe],
+  declarations: [
+    AuthentificationComponent,
+    PageNotFoundComponent,
+    DropZoneDirective,
+    FileUploadComponent,
+    FileSizePipe,
+    ServiceTestComponent
+  ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -32,7 +40,8 @@ import { FileSizePipe } from './file-size.pipe';
     NgxAuthFirebaseUIModule,
     DropZoneDirective,
     FileSizePipe,
-    FileUploadComponent
+    FileUploadComponent,
+    ServiceTestComponent
   ]
 })
 export class CoreModule { }

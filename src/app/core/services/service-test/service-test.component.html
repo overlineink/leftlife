@@ -1,0 +1,27 @@
+<div *ngFor="let group of groups$ | async">
+    <ul>
+      <li>{{group.groupTitle}}</li>
+      <li>{{group.groupEventsTot}}</li>
+      <li>{{group.id}}</li>
+    </ul>
+    <img  width="200px" src={{group.groupImage}}> 
+  </div>
+
+<div *ngFor="let idea of ideas$ | async">
+  <ul>
+    <li>{{idea.ideaTitle}}</li>
+    <li>{{idea.id}}</li>
+    <li>{{idea.ideaText}}</li>
+  </ul>
+  <img  width="200px" src={{idea.ideaImage}}> 
+</div>
+
+<div *ngFor="let person of persons$ | async">
+    <ul>
+      <li>{{person.displayName}}</li>
+      <li>{{person.id}}</li>
+      <li>{{person.local}}</li>
+
+    </ul>
+    <img  width="200px" src={{person.profilePhoto}}> 
+  </div>

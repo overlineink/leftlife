@@ -4,3 +4,9 @@ export interface Tile {
     rows: number;
     text: string;
   }
+
+  export interface TileA {
+    cols: number;
+    rows: number;
+    text: string;
+  }

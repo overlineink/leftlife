@@ -7,6 +7,9 @@ body, html {
     margin-top: 14px;
 }
 
+.margin-bot-0 {
+    margin-bottom: 0px;
+}
 .center {
     text-align: center;
 }
@@ -18,4 +21,5 @@ body, html {
 .primary {
     color: #d50000;
 }
+
   
