@@ -5,6 +5,7 @@ import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
+import { ProfileRoutingModule } from './profile-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProfileEditComponent } from './profile-edit/profile-edit.component';
   imports: [
     CommonModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    ProfileRoutingModule
   ]
 })
 export class ProfileModule { }

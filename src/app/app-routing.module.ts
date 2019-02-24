@@ -1,57 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './profile/profile/profile.component';
 import { AuthentificationComponent } from './core/authentification/authentification.component';
-import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { LoggedInGuard } from 'ngx-auth-firebaseui';
-import { TestSharedComponent } from './shared/test-shared/test-shared.component';
-import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
-import { SearchComponent } from './search/search/search.component';
 import { TimelineComponent } from './timeline/timeline/timeline.component';
-import { IdeaComponent } from './idea/idea/idea.component';
 import { ServiceTestComponent } from './core/services/service-test/service-test.component';
-import { EventComponent } from './event/event/event.component';
-import { GroupComponent } from './group/group/group.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-const routes: Routes = [
-  {
-    path: 'profile',
-    component: ProfileComponent,
-    // canActivate: [LoggedInGuard]
-  },
-  {
-    path: 'editprofile',
-    component: ProfileEditComponent,
-    // canActivate: [LoggedInGuard]
-  },
-  {
-    path: 'search',
-    component: SearchComponent,
-    // canActivate: [LoggedInGuard]
-  },
+const appRoutes: Routes = [
   {
     path: 'timeline',
     component: TimelineComponent,
     // canActivate: [LoggedInGuard]
   },
   {
-    path: 'idea',
-    component: IdeaComponent,
-    // canActivate: [LoggedInGuard]
-  },
-  {
     path: 'servicetest',
     component: ServiceTestComponent,
-    // canActivate: [LoggedInGuard]
-  },
-  {
-    path: 'event',
-    component: EventComponent,
-    // canActivate: [LoggedInGuard]
-  },
-  {
-    path: 'group',
-    component: GroupComponent,
     // canActivate: [LoggedInGuard]
   },
   {
@@ -62,20 +25,11 @@ const routes: Routes = [
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
-  },
-  {
-    path: 'test',
-    component: TestSharedComponent
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent
-  },
-
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

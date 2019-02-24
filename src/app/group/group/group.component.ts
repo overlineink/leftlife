@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GroupsService } from 'src/app/core/services/groups.service';
 
 @Component({
   selector: 'app-group',
@@ -9,9 +10,8 @@ export class GroupComponent implements OnInit {
   // Restructure search header
   // insert it into Group taps
 
-  constructor() { }
+  constructor(private groupService: GroupsService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
 }

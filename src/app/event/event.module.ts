@@ -4,6 +4,7 @@ import { EventComponent } from './event/event.component';
 import { SharedModule } from '../shared/shared.module';
 import { EventHeaderComponent } from './event-header/event-header.component';
 import { EventContentComponent } from './event-content/event-content.component';
+import { EventRoutingModule } from './event-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EventContentComponent } from './event-content/event-content.component';
   imports: [
     CommonModule,
     SharedModule,
-    CommonModule
+    CommonModule,
+    EventRoutingModule
   ],
   exports: [
     EventComponent

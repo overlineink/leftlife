@@ -12,6 +12,7 @@ import { GroupWikiHeaderComponent } from './group-wiki-header/group-wiki-header.
 import { GroupWikiGridComponent } from './group-wiki-grid/group-wiki-grid.component';
 import { GroupWikiSubgroupsComponent } from './group-wiki-subgroups/group-wiki-subgroups.component';
 import { GroupWikiContactComponent } from './group-wiki-contact/group-wiki-contact.component';
+import { GroupRoutingModule } from './group-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { GroupWikiContactComponent } from './group-wiki-contact/group-wiki-conta
   imports: [
     CommonModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    GroupRoutingModule
   ],
   exports: [
     GroupComponent

@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { IdeaProgressComponent } from './idea-progress/idea-progress.component';
 import { IdeaVideoComponent } from './idea-video/idea-video.component';
 import { IdeaContentComponent } from './idea-content/idea-content.component';
+import { IdeaRoutingModule } from './idea-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,11 @@ import { IdeaContentComponent } from './idea-content/idea-content.component';
   imports: [
     CommonModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    IdeaRoutingModule
   ],
   exports: [
-    IdeaComponent,
+    IdeaComponent
   ]
 })
 export class IdeaModule { }
