@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Group, GroupID } from '../models/group.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,6 +10,9 @@ import { map } from 'rxjs/operators';
 export class GroupsService {
   private groupsCollection: AngularFirestoreCollection<Group>;
   groups$: Observable<GroupID[]>;
+
+  groupDoc: AngularFirestoreDocument<Group>;
+  group$: Observable<Group>;
 
   constructor(
     private readonly angularFirestore: AngularFirestore
@@ -27,5 +30,11 @@ export class GroupsService {
       })
     ));
     return this.groups$;
+   }
+
+   // Gets a single group document based on an ID
+   getGroup(id: string): Observable<Group> {
+    this.groupDoc = this.angularFirestore.doc<Group>(`groups/${id}`);
+    return this.group$ = this.groupDoc.valueChanges();
    }
 }

@@ -6,6 +6,10 @@ const ideaRoutes: Routes = [
   {
     path: 'idea',
     component: IdeaComponent
+  },
+  {
+    path: 'idea/:id',
+    component: IdeaComponent
   }
 ];
 

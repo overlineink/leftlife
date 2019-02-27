@@ -26,6 +26,8 @@ const appRoutes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   }
+  // Even AppRouting module is imported as the last module, the wildcard intercepted every Url and I
+  // moved it to the last imported Module EventRoutingModule (don´t know how to fix this)
 ];
 
 @NgModule({

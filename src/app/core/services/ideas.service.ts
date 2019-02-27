@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Idea, IdeaID } from '../models/idea.model';
 import { map } from 'rxjs/operators';
@@ -10,6 +10,9 @@ import { map } from 'rxjs/operators';
 export class IdeasService {
   private ideasCollection: AngularFirestoreCollection<Idea>;
   ideas$: Observable<IdeaID[]>;
+
+  ideaDoc: AngularFirestoreDocument<Idea>;
+  idea$: Observable<Idea>;
 
   constructor(
     private readonly angularFirestore: AngularFirestore
@@ -28,4 +31,10 @@ export class IdeasService {
     ));
     return this.ideas$;
    }
+
+   // get a single idea document based on an ID
+   getIdea(id: string): Observable<Idea> {
+    this.ideaDoc = this.angularFirestore.doc<Idea>(`ideas/${id}`);
+    return this.idea$ = this.ideaDoc.valueChanges();
+  }
 }

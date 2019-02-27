@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { EventModel, EventID } from '../models/event.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,6 +10,9 @@ import { map } from 'rxjs/operators';
 export class EventsService {
   private eventsCollection: AngularFirestoreCollection<EventModel>;
   events$: Observable<EventID[]>;
+
+  eventDoc: AngularFirestoreDocument<EventModel>;
+  event$: Observable<EventModel>;
 
   constructor(
     private readonly angularFirestore: AngularFirestore
@@ -27,5 +30,11 @@ export class EventsService {
       })
     ));
     return this.events$;
+   }
+
+   // Gets a single group document based on an ID
+   getEvent(id: string): Observable<EventModel> {
+    this.eventDoc = this.angularFirestore.doc<EventModel>(`events/${id}`);
+    return this.event$ = this.eventDoc.valueChanges();
    }
 }

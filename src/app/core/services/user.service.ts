@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { User, Person } from '../models/user.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,6 +10,9 @@ import { map } from 'rxjs/operators';
 export class UserService {
   private userCollection: AngularFirestoreCollection<User>;
   persons$: Observable<Person[]>;
+
+  personDoc: AngularFirestoreDocument<User>;
+  person$: Observable<User>;
 
   constructor(
     private readonly angularFirestore: AngularFirestore
@@ -28,4 +31,10 @@ export class UserService {
     ));
     return this.persons$;
    }
+
+   // Gets a single person document based on an ID
+   getPerson(id: string): Observable<User> {
+    this.personDoc = this.angularFirestore.doc<User>(`users/${id}`);
+    return this.person$ = this.personDoc.valueChanges();
+  }
 }

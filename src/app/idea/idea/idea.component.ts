@@ -1,12 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { EventModel } from 'src/app/core/models/event.model';
 
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Idea } from 'src/app/core/models/idea.model';
+import { IdeasService } from 'src/app/core/services/ideas.service';
+
 @Component({
   selector: 'app-idea',
   templateUrl: './idea.component.html',
   styleUrls: ['./idea.component.css']
 })
 export class IdeaComponent implements OnInit {
+  idea$: Observable<Idea>;
   // author attributes
   name: string;
   local: string;
@@ -34,25 +41,12 @@ export class IdeaComponent implements OnInit {
   regionalEvent: EventModel;
   federalEvent: EventModel;
 
-  constructor() {
-    this.name = 'Tobias Hassebrock';
-    this.local = 'Rosbach';
-    this.regional = 'Hessen';
-    this.federal = 'Germany';
-    this.continental = 'Europe';
-    this.profilePhoto = 'https://firebasestorage.googleapis.com/v0/b/leftlife1-e07e0.appspot.com/o/Tobi%2018.12.17%20SW.jpg?alt=media&token=d3e2b3ba-28b5-4487-8792-c749b451386b';
-    this.ideaReason = 'The reason for this idea is';
-    this.likes = '167';
-    this.supporters = '54';
-    this.proposals = '12';
-    this.comments = '';
-
-    this.ideaHashtags = ['Europe', 'Peace'];
-    this.ideaTitle = 'Europäische Republik';
-    this.ideaSubtitle = 'Building a better Europe!';
-    this.ideaText = 'Wir fordern eine europäische Republik, die in einer globalisierten Welt wirtschaft für Gerechtigkeit sorgt.';
-    this.ideaVideo = 'https://firebasestorage.googleapis.com/v0/b/leftlife1-e07e0.appspot.com/o/ideas%2FEuropean%20Union%20promotion%20clip%20%E2%80%94%20Together%20we%20are%20unstoppable.mp4?alt=media&token=a372b953-2bc6-4e74-b923-05c32189850d';
-    this.ideaImage = 'https://firebasestorage.googleapis.com/v0/b/leftlife1-e07e0.appspot.com/o/Tobi%2018.12.17%20SW.jpg?alt=media&token=d3e2b3ba-28b5-4487-8792-c749b451386b';
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private ideasService: IdeasService
+  ) {
+    this.idea$ = this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
 
     this.localEvent = {
       eventTitle: 'Local Event',

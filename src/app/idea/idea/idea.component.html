@@ -1,8 +1,9 @@
 <app-structure>
+  <div *ngIf="idea$ | async as idea">
   <mat-card>
     <div class="container">
-      <img src="{{ideaImage}}" width="100%">
-      <p class="title">{{ideaTitle}}</p>
+      <img src="{{idea.ideaImage}}" width="100%">
+      <p class="title">{{idea.ideaTitle}}</p>
      <!-- <p class="subtitle">{{ideaSubtitle}}</p>-->
      <router-outlet></router-outlet>
     </div>
@@ -11,44 +12,44 @@
         [label1]="'Likes'"
         [label2]="'Supporter'"
         [label3]="'Proposals'"
-        [number1]="likes"
-        [number2]="supporters"
-        [number3]="proposals">
+        [number1]="idea.ideaLikesTot"
+        [number2]="idea.ideaSupportersTot"
+        [number3]="idea.ideaProposalsTot">
       </app-stats>
 
       <div class="center">
-        <app-hashtags [hashtags]="ideaHashtags"></app-hashtags>
+        <app-hashtags [hashtags]="idea.ideaHashtags"></app-hashtags>
       </div>
 
       <h3 class="primary margin-0 center">Written by</h3>
       <app-header-face
-      [local]="local"
-      [regional]="regional"
-      [federal]="federal"
-      [continental]="continental"
+      [local]="idea.ideaAuthor.authorLocal"
+      [regional]="idea.ideaAuthor.authorRegional"
+      [federal]="idea.ideaAuthor.authorFederal"
+      [continental]="idea.ideaAuthor.authorContinental"
 
-      [name]="name"
-      [profilePhoto]="profilePhoto">
+      [name]="idea.ideaAuthor.authorName"
+      [profilePhoto]="idea.ideaAuthor.authorImage">
     </app-header-face>
   </mat-card>
 
   <mat-card class="margin-top-14 center">
-    <app-idea-video [ideaVideo]="ideaVideo"></app-idea-video>
+    <app-idea-video [ideaVideo]="idea.ideaVideo"></app-idea-video>
     <app-action-bar-share-map></app-action-bar-share-map>
   </mat-card>
 
-  <mat-card class="margin-top-14">
     <app-idea-content
-     [ideaText]="ideaText"
-     [ideaReason]="ideaReason"></app-idea-content>
-  </mat-card>
+     [ideaText]="idea.ideaText"
+     [ideaReason]="idea.ideaReason">
+    </app-idea-content>
 
   <mat-card class="margin-top-14">
       <app-idea-progress class="margin-top-14"
-      [localEvent]="localEvent"
-      [districtEvent]="districtEvent"
-      [regionalEvent]="regionalEvent"
-      [federalEvent]="federalEvent">
+      [localEvent]="idea.ideaEventsUp.eventLocal"
+      [districtEvent]="idea.ideaEventsUp.eventDistrict"
+      [regionalEvent]="idea.ideaEventsUp.eventRegional"
+      [federalEvent]="idea.ideaEventsUp.eventFederal">
     </app-idea-progress>
   </mat-card>
+</div>
 </app-structure>

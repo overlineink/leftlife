@@ -1,3 +1,11 @@
+<div *ngIf="idea | async as thisIdea" >
+  <ul>
+    <li>{{thisIdea.ideaTitle}}</li>
+    <li>{{thisIdea.ideaLocation}}</li>
+  </ul>
+  <img  width="200px" src={{thisIdea.ideaImage}}> 
+</div>
+
 <div *ngFor="let group of groups$ | async">
     <ul>
       <li>{{group.groupTitle}}</li>

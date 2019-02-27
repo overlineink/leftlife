@@ -12,7 +12,20 @@ export interface Idea {
       authorID?: string,
       authorImage?: string;
       authorName?: string;
+      authorLocal?: string;
+      authorRegional?: string;
+      authorFederal?: string;
+      authorContinental?: string;
     };
+    ideaEventsUp?: {
+      eventLocal?: string;
+      eventDistrict?: string;
+      eventRegional?: string;
+      eventFederal?: string;
+    };
+    ideaLikesTot?: string;
+    ideaProposalsTot?: string;
+    ideaSupportersTot?: string;
    // from Author
 
     // User operations

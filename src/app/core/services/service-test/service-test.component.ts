@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IdeasService } from '../ideas.service';
 import { Observable } from 'rxjs';
 import { Idea, IdeaID } from '../../models/idea.model';
-import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Person } from '../../models/user.model';
 import { UserService } from '../user.service';
 import { EventID, EventModel } from '../../models/event.model';
@@ -21,19 +21,23 @@ export class ServiceTestComponent implements OnInit {
   events$: Observable<EventID[]>;
   groups$: Observable<GroupID[]>;
 
+  ideaDoc: AngularFirestoreDocument<Idea>;
+  idea: Observable<Idea>;
+
   constructor(
     private ideasService: IdeasService,
     private personService: UserService,
     private eventsService: EventsService,
-    private groupsService: GroupsService
+    private groupsService: GroupsService,
   ) {
     this.ideas$ = this.ideasService.getIdeas();
     this.persons$ = this.personService.getPersons();
     this.events$ = this.eventsService.getEvents();
     this.groups$ = this.groupsService.getGroups();
-   }
+    this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
 
-  ngOnInit() {
+    this.idea = this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
   }
 
+  ngOnInit() {}
 }
