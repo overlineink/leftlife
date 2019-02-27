@@ -16,9 +16,10 @@ If you would like to support this project, use GitHub or write me an email: tobi
 5. Authentication: (https://ngx-auth-firebaseui.firebaseapp.com)
 
 # Current Main Task
-1. Build the profile
-    with Authentifikation/Login
-    CRUD API
+1. Build a Follower system
+2. Build a Like system
+3. Build a Comment system
+4. Create search systems
 
 
 ## Angular
