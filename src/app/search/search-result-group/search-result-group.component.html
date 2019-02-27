@@ -1,36 +1,37 @@
 <mat-card-header class="center justify">
-    <mat-card-title>{{groupTitle}}</mat-card-title>
-    <mat-card-subtitle>{{groupLevel}}</mat-card-subtitle>
-  </mat-card-header>
-  <img *ngIf="groupImage" mat-card-image src={{groupImage}} alt="Photo of the {{groupTitle}}" width="200px">
+  <mat-card-title>{{groupTitle}}</mat-card-title>
+  <mat-card-subtitle>{{groupLevel}}</mat-card-subtitle>
+</mat-card-header>
+<img *ngIf="groupImage" mat-card-image src={{groupImage}} alt="Photo of the {{groupTitle}}" width="200px">
   
-  <mat-card-content>
-    <app-stats
-      [label1]="members"
-      [label2]="followers"
-      [label3]="ideas"
-      [label4]="events"
-      [number1]="groupMembersTot"
-      [number2]="groupFollowersTot"
-      [number3]="groupIdeasTot"
-      [number4]="groupEventsTot">
-    </app-stats>
-      <div class="grid-container">
-          <div class="grid-item">
-            <mat-icon>person</mat-icon>
-          </div>
-          <div class="grid-item">
-            <p>{{groupLeader}}</p>
-          </div>
-          <div class="grid-item">
-            <mat-icon>work</mat-icon>
-          </div>
-          <div class="grid-item">
-            <app-hashtags [hashtags]="groupHashtags"></app-hashtags>
-          </div>
-        </div>
-  </mat-card-content>
-  <mat-card-actions class="center">
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
+<mat-card-content>
+  <app-stats
+    [label1]="members"
+    [label2]="followers"
+    [label3]="ideas"
+    [label4]="events"
+    [number1]="groupMembersTot"
+    [number2]="groupFollowersTot"
+    [number3]="groupIdeasTot"
+    [number4]="groupEventsTot">
+  </app-stats>
+  <div class="grid-container">
+    <div class="grid-item">
+      <mat-icon>person</mat-icon>
+    </div>
+    <div class="grid-item">
+      <p>{{groupLeader}}</p>
+    </div>
+    <div class="grid-item">
+      <mat-icon>work</mat-icon>
+    </div>
+    <div class="grid-item">
+      <app-hashtags [hashtags]="groupHashtags"></app-hashtags>
+    </div>
+  </div>
+</mat-card-content>
+
+<mat-card-actions class="center">
+  <button mat-button>LIKE</button>
+  <button mat-button>SHARE</button>
+</mat-card-actions>

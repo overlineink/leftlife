@@ -1,12 +1,12 @@
-<p class="primary font-size margin-top inline-block">Progress</p>
+<p *ngIf="ideaEventsUp" class="primary font-size margin-top inline-block">Progress</p>
 <mat-vertical-stepper>
-    <mat-step label="{{localEvent.eventTitle}}">
+    <mat-step label="{{eventLocal.eventTitle}}">
         <div class="grid-container">
           <div class="grid-item">
             <mat-icon>event</mat-icon>
           </div>
           <div class="grid-item">
-            <p>{{localEvent.eventDate.date}} - {{localEvent.eventDate.time}}</p>
+            <p>{{convertedLocalDate | date: 'MMM d, y, HH:mm' }}</p>
           </div>
           <div class="grid-item">
             <mat-icon class="primary">clear</mat-icon>
@@ -15,20 +15,20 @@
             <mat-icon>place</mat-icon>
           </div>
           <div class="grid-item">
-            <p class="">{{localEvent.eventLocation.postCode}} {{localEvent.eventLocation.city}}, 
-              {{localEvent.eventLocation.street}} {{localEvent.eventLocation.houseNumber}},
-              {{localEvent.eventLocation.additionalInformation}}
+            <p class="">{{eventLocal.eventLocation.postCode}} {{eventLocal.eventLocation.city}}, 
+              {{eventLocal.eventLocation.street}} {{eventLocal.eventLocation.houseNumber}},
+              {{eventLocal.eventLocation.additionalInformation}}
             </p>
           </div>
         </div>
       </mat-step>
-      <mat-step label="{{localEvent.eventTitle}}">
+      <mat-step label="{{eventDistrict.eventTitle}}">
           <div class="grid-container">
             <div class="grid-item">
               <mat-icon>event</mat-icon>
             </div>
             <div class="grid-item">
-              <p>{{localEvent.eventDate.date}} - {{localEvent.eventDate.time}}</p>
+              <p>{{convertedDistrictDate | date: 'MMM d, y, HH:mm' }}</p>
             </div>
             <div class="grid-item">
               <mat-icon class="primary">clear</mat-icon>
@@ -37,20 +37,20 @@
               <mat-icon>place</mat-icon>
             </div>
             <div class="grid-item">
-              <p class="">{{localEvent.eventLocation.postCode}} {{localEvent.eventLocation.city}}, 
-                {{localEvent.eventLocation.street}} {{localEvent.eventLocation.houseNumber}},
-                {{localEvent.eventLocation.additionalInformation}}
+              <p class="">{{eventDistrict.eventLocation.postCode}} {{eventDistrict.eventLocation.city}}, 
+                {{eventDistrict.eventLocation.street}} {{eventDistrict.eventLocation.houseNumber}},
+                {{eventDistrict.eventLocation.additionalInformation}}
               </p>
             </div>
           </div>
         </mat-step>
-        <mat-step label="{{localEvent.eventTitle}}">
+        <mat-step label="{{eventRegional.eventTitle}}">
             <div class="grid-container">
               <div class="grid-item">
                 <mat-icon>event</mat-icon>
               </div>
               <div class="grid-item">
-                <p>{{localEvent.eventDate.date}} - {{localEvent.eventDate.time}}</p>
+                <p>{{convertedRegionalDate | date: 'MMM d, y, HH:mm' }}</p>
               </div>
               <div class="grid-item">
                 <mat-icon class="primary">clear</mat-icon>
@@ -59,20 +59,20 @@
                 <mat-icon>place</mat-icon>
               </div>
               <div class="grid-item">
-                <p class="">{{localEvent.eventLocation.postCode}} {{localEvent.eventLocation.city}}, 
-                  {{localEvent.eventLocation.street}} {{localEvent.eventLocation.houseNumber}},
-                  {{localEvent.eventLocation.additionalInformation}}
+                <p class="">{{eventRegional.eventLocation.postCode}} {{eventRegional.eventLocation.city}}, 
+                  {{eventRegional.eventLocation.street}} {{eventRegional.eventLocation.houseNumber}},
+                  {{eventRegional.eventLocation.additionalInformation}}
                 </p>
               </div>
             </div>
           </mat-step>
-          <mat-step label="{{localEvent.eventTitle}}">
+          <mat-step label="{{eventFederal.eventTitle}}">
               <div class="grid-container">
                 <div class="grid-item">
                   <mat-icon>event</mat-icon>
                 </div>
                 <div class="grid-item">
-                  <p>{{localEvent.eventDate.date}} - {{localEvent.eventDate.time}}</p>
+                  <p>{{convertedFederalDate | date: 'MMM d, y, HH:mm' }}</p>
                 </div>
                 <div class="grid-item">
                   <mat-icon class="primary">clear</mat-icon>
@@ -81,9 +81,9 @@
                   <mat-icon>place</mat-icon>
                 </div>
                 <div class="grid-item">
-                  <p class="">{{localEvent.eventLocation.postCode}} {{localEvent.eventLocation.city}}, 
-                    {{localEvent.eventLocation.street}} {{localEvent.eventLocation.houseNumber}},
-                    {{localEvent.eventLocation.additionalInformation}}
+                  <p class="">{{eventFederal.eventLocation.postCode}} {{eventFederal.eventLocation.city}}, 
+                    {{eventFederal.eventLocation.street}} {{eventFederal.eventLocation.houseNumber}},
+                    {{eventFederal.eventLocation.additionalInformation}}
                   </p>
                 </div>
               </div>

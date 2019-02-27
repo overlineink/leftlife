@@ -1,14 +1,19 @@
 <app-structure>
   <div *ngIf="idea$ | async as idea">
-  <mat-card>
-    <div class="container">
+    <mat-card>
+      <mat-card-header class="center justify">
+          <mat-card-title>{{idea.ideaTitle}}</mat-card-title>
+          <mat-card-subtitle>{{idea.ideaSubtitle}}</mat-card-subtitle>
+      </mat-card-header>
       <img src="{{idea.ideaImage}}" width="100%">
-      <p class="title">{{idea.ideaTitle}}</p>
-     <!-- <p class="subtitle">{{ideaSubtitle}}</p>-->
-     <router-outlet></router-outlet>
-    </div>
+      <!-- Center the ideaTitle on the ideaImage
+      <div class="container">
+        <img src="{{idea.ideaImage}}" width="100%">
+        <p class="title">{{idea.ideaTitle}}</p>
+        <p class="subtitle">{{ideaSubtitle}}</p>
+      </div>-->
 
-       <app-stats class="margin-top-14"
+      <app-stats class="margin-top-14"
         [label1]="'Likes'"
         [label2]="'Supporter'"
         [label3]="'Proposals'"
@@ -20,36 +25,32 @@
       <div class="center">
         <app-hashtags [hashtags]="idea.ideaHashtags"></app-hashtags>
       </div>
-
       <h3 class="primary margin-0 center">Written by</h3>
       <app-header-face
-      [local]="idea.ideaAuthor.authorLocal"
-      [regional]="idea.ideaAuthor.authorRegional"
-      [federal]="idea.ideaAuthor.authorFederal"
-      [continental]="idea.ideaAuthor.authorContinental"
+        [local]="idea.ideaAuthor.authorLocal"
+        [regional]="idea.ideaAuthor.authorRegional"
+        [federal]="idea.ideaAuthor.authorFederal"
+        [continental]="idea.ideaAuthor.authorContinental"
 
-      [name]="idea.ideaAuthor.authorName"
-      [profilePhoto]="idea.ideaAuthor.authorImage">
-    </app-header-face>
-  </mat-card>
+        [name]="idea.ideaAuthor.authorName"
+        [profilePhoto]="idea.ideaAuthor.authorImage">
+      </app-header-face>
+    </mat-card>
 
-  <mat-card class="margin-top-14 center">
-    <app-idea-video [ideaVideo]="idea.ideaVideo"></app-idea-video>
-    <app-action-bar-share-map></app-action-bar-share-map>
-  </mat-card>
+    <mat-card class="margin-top-14 center">
+      <app-idea-video [ideaVideo]="idea.ideaVideo"></app-idea-video>
+      <app-action-bar-share-map></app-action-bar-share-map>
+    </mat-card>
 
     <app-idea-content
-     [ideaText]="idea.ideaText"
-     [ideaReason]="idea.ideaReason">
+      [ideaText]="idea.ideaText"
+      [ideaReason]="idea.ideaReason">
     </app-idea-content>
 
-  <mat-card class="margin-top-14">
+    <mat-card class="margin-top-14">
       <app-idea-progress class="margin-top-14"
-      [localEvent]="idea.ideaEventsUp.eventLocal"
-      [districtEvent]="idea.ideaEventsUp.eventDistrict"
-      [regionalEvent]="idea.ideaEventsUp.eventRegional"
-      [federalEvent]="idea.ideaEventsUp.eventFederal">
-    </app-idea-progress>
-  </mat-card>
-</div>
+        [ideaEventsUp]="idea.ideaEventsUp">
+      </app-idea-progress>
+    </mat-card>
+  </div>
 </app-structure>

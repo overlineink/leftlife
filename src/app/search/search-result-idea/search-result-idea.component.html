@@ -1,32 +1,33 @@
 <mat-card-header class="center justify">
-    <mat-card-title>{{ideaTitle}}</mat-card-title>
-    <mat-card-subtitle>{{ideaLocation}}</mat-card-subtitle>
-  </mat-card-header>
-  <img *ngIf="ideaImage" mat-card-image src={{ideaImage}} alt="Photo of the {{ideaTitle}}" width="200px">
+  <mat-card-title>{{ideaTitle}}</mat-card-title>
+  <mat-card-subtitle>{{ideaLocation}}</mat-card-subtitle>
+</mat-card-header>
+<img *ngIf="ideaImage" mat-card-image src={{ideaImage}} alt="Photo of the {{ideaTitle}}" width="200px">
 
-  <mat-card-content>
-      <div class="grid-container">
-          <div class="grid-item">
-            <mat-icon>person</mat-icon>
-          </div>
-          <div class="grid-item">
-            <p>{{ideaAuthorName}}</p>
-          </div>
-          <div class="grid-item">
-            <mat-icon>event</mat-icon>
-          </div>
-          <div class="grid-item">
-            <p class="">{{convertedDate | date}}</p>
-          </div>
-          <div class="grid-item">
-            <mat-icon>work</mat-icon>
-          </div>
-          <div class="grid-item">
-            <app-hashtags [hashtags]="ideaHashtags"></app-hashtags>
-          </div>
-        </div>
-  </mat-card-content>
-  <mat-card-actions class="center">
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
+<mat-card-content>
+  <div class="grid-container">
+    <div class="grid-item">
+      <mat-icon>person</mat-icon>
+    </div>
+    <div class="grid-item">
+      <p>{{ideaAuthorName}}</p>
+    </div>
+    <div class="grid-item">
+      <mat-icon>event</mat-icon>
+    </div>
+    <div class="grid-item">
+      <p class="">{{convertedDate | date}}</p>
+    </div>
+    <div class="grid-item">
+      <mat-icon>work</mat-icon>
+    </div>
+    <div class="grid-item">
+      <app-hashtags [hashtags]="ideaHashtags"></app-hashtags>
+    </div>
+  </div>
+</mat-card-content>
+
+<mat-card-actions class="center">
+  <button mat-button>LIKE</button>
+  <button mat-button>SHARE</button>
+</mat-card-actions>

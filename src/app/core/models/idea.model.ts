@@ -1,6 +1,7 @@
 export interface Idea {
     // attributes of the idea
     ideaTitle?: string;
+    ideaSubtitle?: string;
     ideaImage?: string;
     ideaVideo?: string;
     ideaText?: string;
@@ -8,6 +9,11 @@ export interface Idea {
     ideaHashtags?: string[];
     ideaDate?: string;
     ideaLocation?: string;
+
+    ideaLikesTot?: string;
+    ideaProposalsTot?: string;
+    ideaSupportersTot?: string;
+
     ideaAuthor?: {
       authorID?: string,
       authorImage?: string;
@@ -18,14 +24,64 @@ export interface Idea {
       authorContinental?: string;
     };
     ideaEventsUp?: {
-      eventLocal?: string;
-      eventDistrict?: string;
-      eventRegional?: string;
-      eventFederal?: string;
+      eventLocal?: {
+        eventTitle: string;
+        eventDate?: {
+          date?: string;
+          time?: string;
+        };
+        eventLocation?: {
+          postCode?: string;
+          city?: string;
+          street?: string;
+          houseNumber?: string;
+          additionalInformation?: string;
+      };
+      };
+      eventDistrict?: {
+        eventTitle: string;
+        eventDate?: {
+          date?: string;
+          time?: string;
+        };
+        eventLocation?: {
+          postCode?: string;
+          city?: string;
+          street?: string;
+          houseNumber?: string;
+          additionalInformation?: string;
+      };
+      };
+      eventRegional?: {
+        eventTitle: string;
+        eventDate?: {
+          date?: string;
+          time?: string;
+        };
+        eventLocation?: {
+          postCode?: string;
+          city?: string;
+          street?: string;
+          houseNumber?: string;
+          additionalInformation?: string;
+      };
+      }
+      eventFederal?: {
+        eventTitle: string;
+        eventDate?: {
+          date?: string;
+          time?: string;
+        };
+        eventLocation?: {
+          postCode?: string;
+          city?: string;
+          street?: string;
+          houseNumber?: string;
+          additionalInformation?: string;
+      };
+      }
     };
-    ideaLikesTot?: string;
-    ideaProposalsTot?: string;
-    ideaSupportersTot?: string;
+
    // from Author
 
     // User operations
