@@ -7,7 +7,6 @@ import { GroupWikiComponent } from './group-wiki/group-wiki.component';
 import { GroupStreamComponent } from './group-stream/group-stream.component';
 import { GroupEventsComponent } from './group-events/group-events.component';
 import { GroupIdeasComponent } from './group-ideas/group-ideas.component';
-import { FilterComponent } from './filter/filter.component';
 import { GroupWikiContactComponent } from './group-wiki-contact/group-wiki-contact.component';
 import { GroupRoutingModule } from './group-routing.module';
 import { SearchModule } from '../search/search.module';
@@ -19,7 +18,6 @@ import { SearchModule } from '../search/search.module';
     GroupStreamComponent,
     GroupEventsComponent,
     GroupIdeasComponent,
-    FilterComponent,
     GroupWikiContactComponent,
   ],
   imports: [

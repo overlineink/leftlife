@@ -1,20 +1,17 @@
 <div class="center">
   <mat-form-field>
-    <input class="center" matInput placeholder="Suche Namen">
-  </mat-form-field>
-  <br>
-  <mat-form-field>
-    <input class="center" matInput placeholder="Suche Themen">
+    <input class="center" matInput placeholder="Search for Names">
   </mat-form-field>
   <br>
   <app-hashtags-edit
     [hashtags]="hashtags"
+    [inputPlaceholder]="inputHashtagsPlaceholder"
     [editMode]="editMode">
   </app-hashtags-edit>
   <div>
-    <p class="inline-block">heute</p>
+    <p class="inline-block">today</p>
     <mat-slider class="inline-block"></mat-slider>
-    <p class="inline-block">alle</p>
+    <p class="inline-block">all</p>
   </div>
   <button mat-raised-button color="primary">Search</button>
 </div>

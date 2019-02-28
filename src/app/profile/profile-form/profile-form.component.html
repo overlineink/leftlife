@@ -20,6 +20,12 @@
             <input matInput type="text" formControlName="continental" value="{{user.continental}}" placeholder="Continent">
         </mat-form-field>
         <br>
-        <app-hashtags-edit [editMode]="editMode" [hashtags]="user.hashtags"></app-hashtags-edit>
+        <app-hashtags-edit
+            [editMode]="editMode" 
+            [hashtags]="user.hashtags"
+            [inputPlaceholder]="inputPlaceholder"
+            (addHashtag)="addHashtag($event)"
+            (removeHashtag)="removeHashtag($event)"
+        ></app-hashtags-edit>
   </form>
   </div>

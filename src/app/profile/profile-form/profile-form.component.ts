@@ -14,6 +14,7 @@ export class ProfileFormComponent implements OnInit {
 
   @Output() editMode: boolean;
   editButton: string;
+  inputPlaceholder: string;
 
   editForm: FormGroup;
   local: string;
@@ -25,11 +26,10 @@ export class ProfileFormComponent implements OnInit {
     public authService: AuthService,
     private fb: FormBuilder,
     public afs: AngularFirestore,
-  ) {
-   }
+  ) { }
 
   ngOnInit() {
-    this. user = this.authService.getUser();
+    this.user = this.authService.getUser();
 
     this.editForm = this.fb.group({
       'federal': {value: '', disabled: true},
@@ -39,6 +39,7 @@ export class ProfileFormComponent implements OnInit {
       'continental': {value: '', disabled: true}
     });
     this.editButton = 'Edit';
+    this.inputPlaceholder = 'Edit Hashtags';
     this.editMode = false;
   }
 
@@ -85,6 +86,14 @@ export class ProfileFormComponent implements OnInit {
     if (this.continental !== '') {
       this.authService.updateUser({'continental': this.continental});
     }
+  }
+
+  removeHashtag(hashtags: string): void {
+    this.authService.updateUser({'hashtags': hashtags});
+  }
+
+  addHashtag(hashtags: string): void {
+    this.authService.updateUser({'hashtags': hashtags});
   }
 
 }

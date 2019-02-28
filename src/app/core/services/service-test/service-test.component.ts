@@ -9,6 +9,8 @@ import { EventID, EventModel } from '../../models/event.model';
 import { EventsService } from '../events.service';
 import { GroupID } from '../../models/group.model';
 import { GroupsService } from '../groups.service';
+import { SubgroupsService } from '../subgroups.service';
+import { GroupsSubcollectionsService } from '../groups-subcollections.service';
 
 @Component({
   selector: 'app-service-test',
@@ -20,8 +22,8 @@ export class ServiceTestComponent implements OnInit {
   persons$: Observable<Person[]>;
   events$: Observable<EventID[]>;
   groups$: Observable<GroupID[]>;
+  subEvents$: Observable<EventID[]>;
 
-  ideaDoc: AngularFirestoreDocument<Idea>;
   idea$: Observable<Idea>;
 
   constructor(
@@ -29,12 +31,15 @@ export class ServiceTestComponent implements OnInit {
     private personService: UserService,
     private eventsService: EventsService,
     private groupsService: GroupsService,
+    private groupSubcollectionService: GroupsSubcollectionsService
   ) {
     this.ideas$ = this.ideasService.getIdeas();
     this.persons$ = this.personService.getPersons();
     this.events$ = this.eventsService.getEvents();
     this.groups$ = this.groupsService.getGroups();
     this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
+    this.subEvents$ = this.groupSubcollectionService.getSubEventcollection('cBSVtYm2kk3IWtM320bn');
+    console.log(this.subEvents$);
 
     this.idea$ = this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
   }

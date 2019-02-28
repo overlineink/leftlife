@@ -6,15 +6,15 @@ export interface User {
     displayName?: string;
     userRank?: string;
 
-    local: string;
-    regional: string;
-    federal: string;
-    continental: string;
+    local?: string;
+    regional?: string;
+    federal?: string;
+    continental?: string;
 
-    followers: string;
-    following: string;
-    ideas: string;
-    hashtags: string[];
+    followers?: string;
+    following?: string;
+    ideas?: string;
+    hashtags?: string[];
 
     // position
 }

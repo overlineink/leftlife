@@ -10,7 +10,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class AuthService {
   user$: Observable<User>;
-  user: any;
+  user: User;
   userID: string;
 
   constructor(
@@ -39,8 +39,9 @@ export class AuthService {
       if (user$) {
         this.userID = user$.uid;
         this.user = user$;
-        // console.log(this.user);
+        console.log(this.user);
         // console.log('saved id: ' + this.userID);
+        return this.user;
       } else {
       }
     });

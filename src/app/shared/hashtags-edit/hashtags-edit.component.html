@@ -6,7 +6,7 @@
         {{hashtag}}
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
       </mat-chip>
-      <input placeholder="Edit Hashtag"
+      <input placeholder="{{inputPlaceholder}}"
             disabled="{{!editMode}}"
              [matChipInputFor]="chipList"
              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"

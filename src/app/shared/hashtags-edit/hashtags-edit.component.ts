@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { AuthService } from 'src/app/core/services/auth.service';
 import {MatChipInputEvent} from '@angular/material';
@@ -11,6 +11,10 @@ import {MatChipInputEvent} from '@angular/material';
 export class HashtagsEditComponent implements OnInit, OnChanges {
   @Input() hashtags: string[];
   @Input() editMode: boolean;
+  @Input () inputPlaceholder: string;
+  @Output() addHashtag = new EventEmitter<string[]>();
+  @Output() removeHashtag = new EventEmitter<string[]>();
+
   id: string;
   hashtag: string;
 
@@ -37,7 +41,8 @@ export class HashtagsEditComponent implements OnInit, OnChanges {
 
     if (index >= 0) {
       this.hashtags.splice(index, 1);
-      this.authService.updateUser({'hashtags': this.hashtags});
+      this.removeHashtag.emit(this.hashtags);
+      // this.authService.updateUser({'hashtags': this.hashtags});
     }
   }
 
@@ -48,7 +53,9 @@ export class HashtagsEditComponent implements OnInit, OnChanges {
     // Add our hashtag
     if ((value || '').trim()) {
       this.hashtags.push(value.trim());
-      this.authService.updateUser({'hashtags': this.hashtags});
+      this.addHashtag.emit(this.hashtags);
+
+      // this.authService.updateUser({'hashtags': this.hashtags});
 
     }
 

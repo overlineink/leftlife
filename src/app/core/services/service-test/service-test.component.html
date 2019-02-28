@@ -1,3 +1,13 @@
+<div *ngFor="let event of subEvents$ | async">
+    <p>Subevents</p>
+    <ul>
+        <li>{{event.eventTitle}}</li>
+        <li>{{event.eventParticipants}}</li>
+        <li>{{event.id}}</li>
+    </ul>
+    <img  width="200px" src={{event.eventImage}}> 
+</div>
+
 <div *ngIf="idea$ | async as thisIdea" >
   <ul>
     <li>{{thisIdea.ideaTitle}}</li>

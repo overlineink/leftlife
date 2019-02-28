@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchFormComponent implements OnInit {
   hashtags: string[];
+  inputHashtagsPlaceholder: string;
   editMode = true;
 
 
@@ -14,6 +15,7 @@ export class SearchFormComponent implements OnInit {
 
   ngOnInit() {
     this. hashtags = [];
+    this.inputHashtagsPlaceholder = 'Search for Hashtags';
   }
 
 }
