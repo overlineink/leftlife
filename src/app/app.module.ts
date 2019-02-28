@@ -13,6 +13,8 @@ import { EventModule } from './event/event.module';
 import { GroupModule } from './group/group.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ChatModule } from './chat/chat.module';
+import { NotificationsModule } from './notifications/notifications.module';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     IdeaModule,
     GroupModule,
     CoreModule,
+    ChatModule,
+    NotificationsModule,
     EventModule,
     AppRoutingModule
   ],

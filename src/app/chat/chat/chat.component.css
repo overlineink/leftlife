@@ -1,0 +1,38 @@
+.no-margin-bot {
+    margin-bottom: 0px;
+  }
+  
+  .no-margin-top {
+    margin-top: 0px;
+  }
+  
+  .post-card {
+    margin-left: 14px;
+    max-width: 600px;
+  }
+  
+  .wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .main-container {
+      margin: 75px auto;
+      position: relative;
+      text-align: center;
+  }
+  .content {
+      margin: 14px;
+      text-align: left;
+      display: block;
+  }
+  
+  .primary {
+    color: #d50000;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  
