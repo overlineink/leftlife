@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { EventID, EventModel } from '../models/event.model';
+import { Idea, IdeaID } from '../models/idea.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,13 @@ import { EventID, EventModel } from '../models/event.model';
 export class GroupsSubcollectionsService {
   private subEventsCollection: AngularFirestoreCollection<EventModel>;
   subEventsCollection$: Observable<EventID[]>;
-
   subEventDoc: AngularFirestoreDocument<EventModel>;
   subEvent$: Observable<EventModel>;
+
+  private subIdeasCollection: AngularFirestoreCollection<Idea>;
+  subIdeasCollection$: Observable<IdeaID[]>;
+  subIdeaDoc: AngularFirestoreDocument<Idea>;
+  subIdea$: Observable<Idea>;
 
 
   constructor(private readonly angularFirestore: AngularFirestore) { }
@@ -29,6 +34,20 @@ export class GroupsSubcollectionsService {
       })
     ));
     return this.subEventsCollection$;
+   }
+
+   getSubIdeascollection(parentID: string): Observable<IdeaID[]> {
+    // gets the subIdea collection
+    this.subIdeasCollection = this.angularFirestore.collection<Idea>(`groups/${parentID}/subIdeas`);
+    // gets the subIdeas and an aditional id
+    this.subIdeasCollection$ = this.subIdeasCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as Idea;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      })
+    ));
+    return this.subIdeasCollection$;
    }
 
    // Gets a single event document based on an ID of the subEventsCollection

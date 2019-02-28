@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Tile } from 'src/app/search/tile.interface';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Idea } from 'src/app/core/models/idea.model';
 
 @Component({
   selector: 'app-group-ideas',
@@ -7,18 +8,12 @@ import { Tile } from 'src/app/search/tile.interface';
   styleUrls: ['./group-ideas.component.css']
 })
 export class GroupIdeasComponent implements OnInit {
-  ideaimages: boolean;
-  tiles: Tile[] = [
-    {text: 'One', cols: 1, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 1, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 1, rows: 1, color: '#DDBDF1'},
-  ];
+  @Input() subIdeas$: Observable<Idea[]>;
+
 
   constructor() { }
 
   ngOnInit() {
-    this.ideaimages = false;
   }
 
 }

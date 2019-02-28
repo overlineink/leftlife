@@ -9,7 +9,6 @@ import { EventID, EventModel } from '../../models/event.model';
 import { EventsService } from '../events.service';
 import { GroupID } from '../../models/group.model';
 import { GroupsService } from '../groups.service';
-import { SubgroupsService } from '../subgroups.service';
 import { GroupsSubcollectionsService } from '../groups-subcollections.service';
 
 @Component({

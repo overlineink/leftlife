@@ -10,10 +10,14 @@
             <app-group-stream></app-group-stream>
           </mat-tab>
           <mat-tab label="Events">
-            <app-group-events></app-group-events>
+            <app-group-events
+              [subEvents$]="subEvents$">
+            </app-group-events>
           </mat-tab>
           <mat-tab label="Ideen">
-            <app-group-ideas></app-group-ideas>
+            <app-group-ideas
+              [subIdeas$]="subIdeas$">
+          </app-group-ideas>
           </mat-tab>
         </mat-tab-group>
       </mat-card>

@@ -2,70 +2,20 @@
     <mat-card class="center">
         <app-search-form></app-search-form>
     </mat-card>
-</mat-card>
 
-  
-  <mat-card-header class="margin-top">
-    <mat-card-title>Ideen & Posts</mat-card-title>
-    <mat-slide-toggle (click)="eventimages=!eventimages">Listenansicht</mat-slide-toggle>
-  </mat-card-header>
-  
-  <mat-vertical-stepper *ngIf="!eventimages">
-    <mat-step label="Europäische Republik">
-      <div class="grid-container">
-        <div class="grid-item">
-          <mat-icon>event</mat-icon>
-        </div>
-        <div class="grid-item">
-          <p>04.06.2018 - 19:00</p>
-        </div>
-        <div class="grid-item">
-          <mat-icon class="green">done</mat-icon>
-        </div>
-        <div class="grid-item">
-          <mat-icon>place</mat-icon>
-        </div>
-        <div class="grid-item">
-          <p class="">Friedberger Landstraße 61191 Rosbach</p>
-        </div>
-      </div>
-      <div class="grid-item">
-          <button color="primary" mat-raised-button routerLink="/event/1">Event</button>
-        </div>
-    </mat-step>
-    <mat-step label="Europäische Republik">
-      <div class="grid-container">
-        <div class="grid-item">
-          <mat-icon>event</mat-icon>
-        </div>
-        <div class="grid-item">
-          <p>04.06.2018 - 19:00</p>
-        </div>
-        <div class="grid-item">
-          <mat-icon class="primary">clear</mat-icon>
-        </div>
-        <div class="grid-item">
-          <mat-icon>place</mat-icon>
-        </div>
-        <div class="grid-item">
-          <p class="">Friedberger Landstraße 61191 Rosbach</p>
-        </div>
-      </div>
-      <div class="grid-item">
-          <button color="primary" mat-raised-button routerLink="/event/1">Event</button>
-        </div>
-    </mat-step>
-  </mat-vertical-stepper>
-  
-  <mat-grid-list cols="4" rowHeight="100px" *ngIf="eventimages">
-    <mat-grid-tile class="width"
-        *ngFor="let tile of tiles"
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [style.background]="tile.color">
-      {{tile.text}}
-      <img mat-card-image src="assets/img/Europa.jpg"
-      alt="Tobias Hassebrock" class="pointer" matTooltip="Idee Europäische Republik">
-    </mat-grid-tile>
-  </mat-grid-list>
-  
+    <mat-card *ngFor="let event of subEvents$ | async" class="margin-top-14">
+        <app-search-result-event
+            [eventDate]="event.eventDate"
+            [eventTitle]="event.eventTitle"
+            [eventHost]="event.eventHost"
+            [eventImage]="event.eventImage"
+            [eventHashtags]="event.eventHashtags"
+            [eventModerator]="event.eventModerator"
+            [eventTasksTot]="event.eventTasksTot"
+            [eventTopicsTot]="event.eventTopicsTot"
+            [eventIdeasTot]="event.eventIdeasTot"
+            [eventParticipants]="event.eventParticipants"
+            [eventLocation]="event.eventLocation">
+        </app-search-result-event>
+    </mat-card>
+</mat-card>
