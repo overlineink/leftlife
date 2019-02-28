@@ -1,13 +1,10 @@
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
+    grid-gap: 10px;
   }
   .grid-item {
     font-size: 14px;
     text-align: center;
     margin: auto;
-  }
-
-  .margin-right {
-      margin-right: 14px;
   }

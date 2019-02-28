@@ -8,6 +8,7 @@ import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search/search.component';
 import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CoreModule } from '../core/core.module';
     SearchResultIdeaComponent,
     SearchResultPersonComponent,
     SearchResultEventComponent,
-    SearchResultGroupComponent
+    SearchResultGroupComponent,
+    SearchFormComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,12 @@ import { CoreModule } from '../core/core.module';
     SearchRoutingModule
   ],
   exports: [
-    SearchComponent
+    SearchComponent,
+    SearchResultEventComponent,
+    SearchResultGroupComponent,
+    SearchResultIdeaComponent,
+    SearchResultPersonComponent,
+    SearchFormComponent
   ]
 })
 export class SearchModule { }

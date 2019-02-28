@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GroupWikiSubgroupsComponent } from './group-wiki-subgroups.component';
+import { SearchFormComponent } from './search-form.component';
 
-describe('GroupWikiSubgroupsComponent', () => {
-  let component: GroupWikiSubgroupsComponent;
-  let fixture: ComponentFixture<GroupWikiSubgroupsComponent>;
+describe('SearchFormComponent', () => {
+  let component: SearchFormComponent;
+  let fixture: ComponentFixture<SearchFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupWikiSubgroupsComponent ]
+      declarations: [ SearchFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GroupWikiSubgroupsComponent);
+    fixture = TestBed.createComponent(SearchFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

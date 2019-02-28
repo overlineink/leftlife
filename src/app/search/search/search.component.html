@@ -1,64 +1,48 @@
 <app-structure>
   <mat-card class="post-card">
-      <div class="center">
-        <mat-form-field>
-          <input class="center" matInput placeholder="Suche Namen">
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-          <input class="center" matInput placeholder="Suche Themen">
-        </mat-form-field>
-        <br>
-        <app-hashtags-edit [hashtags]="hashtags"></app-hashtags-edit>
-        <div>
-          <p class="inline-block">heute</p>
-          <mat-slider class="inline-block"></mat-slider>
-          <p class="inline-block">alle</p>
-        </div>
-        <button mat-raised-button color="primary">Search</button>
-      </div>
-    </mat-card>
+    <app-search-form></app-search-form>
+  </mat-card>
 
-    <mat-card class="post-card a">
-      <mat-tab-group>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <mat-icon>select_all</mat-icon>
-          </ng-template>
-          <mat-card>
-            <mat-card *ngFor="let idea of ideas$ | async" class="margin-top-14">
-              <app-search-result-idea
-                [ideaTitle]="idea.ideaTitle"
-                [ideaLocation]="idea.ideaLocation"
-                [ideaAuthorName]="idea.ideaAuthor.authorName"
-                [ideaDate]="idea.ideaDate"
-                [ideaHashtags]="idea.ideaHashtags"
-                [ideaImage]="idea.ideaImage"
-                [ideaID]="idea.id">
-              </app-search-result-idea>
+  <mat-card class="post-card a">
+    <mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>select_all</mat-icon>
+        </ng-template>
+        <mat-card>
+          <mat-card *ngFor="let idea of ideas$ | async" class="margin-top-14">
+            <app-search-result-idea
+              [ideaTitle]="idea.ideaTitle"
+              [ideaLocation]="idea.ideaLocation"
+              [ideaAuthorName]="idea.ideaAuthor.authorName"
+              [ideaDate]="idea.ideaDate"
+              [ideaHashtags]="idea.ideaHashtags"
+              [ideaImage]="idea.ideaImage"
+              [ideaID]="idea.id">
+            </app-search-result-idea>
+          </mat-card>
+        </mat-card>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>person</mat-icon>
+        </ng-template>
+        <mat-card>
+            <mat-card *ngFor="let person of persons$ | async" class="margin-top-14">
+              <app-search-result-person
+                [local]="person.local"
+                [regional]="person.regional"
+                [federal]="person.federal"
+                [continental]="person.continental"
+
+                [name]="person.displayName"
+                [profilePhoto]="person.profilePhoto"
+                [hashtags]="person.hashtags"
+                [ideas]="person.ideas"
+                [userRank]="person.userRank">
+              </app-search-result-person>
             </mat-card>
           </mat-card>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <mat-icon>person</mat-icon>
-          </ng-template>
-          <mat-card>
-              <mat-card *ngFor="let person of persons$ | async" class="margin-top-14">
-                <app-search-result-person
-                  [local]="person.local"
-                  [regional]="person.regional"
-                  [federal]="person.federal"
-                  [continental]="person.continental"
-
-                  [name]="person.displayName"
-                  [profilePhoto]="person.profilePhoto"
-                  [hashtags]="person.hashtags"
-                  [ideas]="person.ideas"
-                  [userRank]="person.userRank">
-                </app-search-result-person>
-              </mat-card>
-            </mat-card>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>

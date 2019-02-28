@@ -8,11 +8,9 @@ import { GroupStreamComponent } from './group-stream/group-stream.component';
 import { GroupEventsComponent } from './group-events/group-events.component';
 import { GroupIdeasComponent } from './group-ideas/group-ideas.component';
 import { FilterComponent } from './filter/filter.component';
-import { GroupWikiHeaderComponent } from './group-wiki-header/group-wiki-header.component';
-import { GroupWikiGridComponent } from './group-wiki-grid/group-wiki-grid.component';
-import { GroupWikiSubgroupsComponent } from './group-wiki-subgroups/group-wiki-subgroups.component';
 import { GroupWikiContactComponent } from './group-wiki-contact/group-wiki-contact.component';
 import { GroupRoutingModule } from './group-routing.module';
+import { SearchModule } from '../search/search.module';
 
 @NgModule({
   declarations: [
@@ -22,16 +20,14 @@ import { GroupRoutingModule } from './group-routing.module';
     GroupEventsComponent,
     GroupIdeasComponent,
     FilterComponent,
-    GroupWikiHeaderComponent,
-    GroupWikiGridComponent,
-    GroupWikiSubgroupsComponent,
     GroupWikiContactComponent,
   ],
   imports: [
     CommonModule,
     CoreModule,
     SharedModule,
-    GroupRoutingModule
+    GroupRoutingModule,
+    SearchModule
   ],
   exports: [
     GroupComponent

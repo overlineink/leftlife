@@ -1,0 +1,13 @@
+<div class="grid-container">
+    <mat-card *ngFor="let photoDetail of photoDetailArray" class="grid-item">
+        <img mat-card-image src={{photoDetail.photo}} alt="Photo of the {{photoDetail.name}}" width="100%">
+        <div class="grid-container">
+            <div class="grid-item">
+                <mat-icon>person</mat-icon>
+            </div>
+            <div class="grid-item">
+                <p>{{photoDetail.name}}</p>
+            </div>      
+        </div>
+    </mat-card> 
+</div>

@@ -15,7 +15,6 @@ import { GroupsService } from 'src/app/core/services/groups.service';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  hashtags = ['Europa', 'SPD', 'EU'];
   ideas$: Observable<IdeaID[]>;
   persons$: Observable<Person[]>;
   events$: Observable<EventID[]>;

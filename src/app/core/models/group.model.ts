@@ -1,5 +1,5 @@
 export interface Group {
-    groupTitle: string;
+    groupTitle?: string;
     groupLocation?: {
         postCode?: string;
         city?: string;
@@ -7,20 +7,31 @@ export interface Group {
         houseNumber?: string;
         additionalInformation?: string;
     };
-    groupContact: {
-        email: string;
-        phone: string;
+    groupContact?: {
+        email?: string;
+        phone?: string;
     };
-    groupImage: string;
-    groupHashtags: string[];
-    groupLevel: string;
-    groupLeader: string;
+    groupImage?: string;
+    groupHashtags?: string[];
+    groupLevel?: string;
+    groupLeader?: string;
 
-    groupMembersTot: string;
-    groupFollowersTot: string;
+    groupMembersTot?: string;
+    groupFollowersTot?: string;
 
-    groupIdeasTot: string;
-    groupEventsTot: string;
+    groupIdeasTot?: string;
+    groupEventsTot?: string;
+
+    groupExecutiveBoard: {
+        boardMemberID: string;
+        boardMemberName: string;
+        boardMemberImage: string;
+    }[];
+
+    groupSubgroups: {
+        boardMemberName: string;
+        boardMemberImage: string;
+    }[];
 
     // subcollections GroupMembers
     // subcollections GroupIdeas
@@ -31,5 +42,5 @@ export interface Group {
 }
 
 export interface GroupID extends Group {
-    id: string;
+    id?: string;
 }

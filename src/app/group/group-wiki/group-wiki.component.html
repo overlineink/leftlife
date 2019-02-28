@@ -1,8 +1,45 @@
+<div *ngIf="group$ | async as group">
+    <mat-card>
+        <app-search-result-group
+            [groupTitle]="group.groupTitle"
+            [groupLevel]="group.groupLevel"
+            [groupImage]="group.groupImage"
+            [groupLeader]="group.groupLeader"
+            
+            [groupHashtags]="group.groupHashtags"
+            [groupIdeasTot]="group.groupIdeasTot"
+            [groupEventsTot]="group.groupEventsTot"
+            [groupMembersTot]="group.groupMembersTot"
+            [groupFollowersTot]="group.groupFollowersTot">
+        </app-search-result-group>
+    </mat-card>
+    <mat-card class="margin-top-14">
+        <mat-card-header>
+            <h2 class="primary">Executive Board</h2>
+        </mat-card-header>
+    </mat-card>
+    <div class="margin-top-14">
+        <app-grid-two-colomn-two-details
+            [photoDetailArray]="group.groupExecutiveBoard">
+        </app-grid-two-colomn-two-details>
+    </div>
 
-<app-group-wiki-header></app-group-wiki-header>
-<mat-divider></mat-divider>
-<app-group-wiki-grid></app-group-wiki-grid>
-<mat-divider></mat-divider>
-<app-group-wiki-subgroups></app-group-wiki-subgroups>
-<mat-divider></mat-divider>
-<app-group-wiki-contact></app-group-wiki-contact>
+    <mat-card class="margin-top-14">
+        <mat-card-header>
+            <h2 class="primary">Subgroups & Projects</h2>
+        </mat-card-header>
+    </mat-card>
+    <div class="margin-top-14">
+        <app-grid-two-colomn-two-details
+            [photoDetailArray]="group.groupSubgroups">
+        </app-grid-two-colomn-two-details>
+    </div>
+    
+    <mat-card class="margin-top-14">
+        <app-group-wiki-contact
+            [groupLocation]="group.groupLocation"
+            [groupContact]="group.groupContact"
+            [groupLeader]="group.groupLeader"
+        ></app-group-wiki-contact>
+    </mat-card>
+</div>

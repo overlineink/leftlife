@@ -58,6 +58,7 @@ import { ActionBarShareComponent } from './action-bar-share/action-bar-share.com
 import { ActionBarPostComponent } from './action-bar-post/action-bar-post.component';
 import { ActionBarShareMapComponent } from './action-bar-share-map/action-bar-share-map.component';
 import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-loc.component';
+import { GridTwoColomnTwoDetailsComponent } from './grid-two-colomn-two-details/grid-two-colomn-two-details.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-lo
     ActionBarPostComponent,
     ActionBarShareMapComponent,
     HeaderFaceNoLocComponent,
+    GridTwoColomnTwoDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -135,6 +137,7 @@ import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-lo
     CardPhotoComponent,
     HashtagsComponent,
     ActionBarComponent,
+    GridTwoColomnTwoDetailsComponent,
 
     MatAutocompleteModule,
     MatBadgeModule,

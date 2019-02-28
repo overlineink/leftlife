@@ -22,7 +22,7 @@ export class ServiceTestComponent implements OnInit {
   groups$: Observable<GroupID[]>;
 
   ideaDoc: AngularFirestoreDocument<Idea>;
-  idea: Observable<Idea>;
+  idea$: Observable<Idea>;
 
   constructor(
     private ideasService: IdeasService,
@@ -36,7 +36,7 @@ export class ServiceTestComponent implements OnInit {
     this.groups$ = this.groupsService.getGroups();
     this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
 
-    this.idea = this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
+    this.idea$ = this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
   }
 
   ngOnInit() {}

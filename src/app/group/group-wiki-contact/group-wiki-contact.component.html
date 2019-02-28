@@ -1,13 +1,34 @@
-<div class="divider-margin-top">
     <mat-card-header>
-      <mat-card-title>Kontakt & Location</mat-card-title>
-      <app-action-bar-post class="pointer right"></app-action-bar-post>
+        <h2 class="primary">Contact & Location</h2>
     </mat-card-header>
-    <p class="font-size-14">SPD Rosbach/Rodheim</p>
-    <p class="grey">Friedberger Straße 24</p>
-    <p class="grey">61191 Rosbach</p>
-    <p class="font-size-14">Vorsitzende des Ortsvereins</p>
-    <p class="grey">Ellen Dietz</p>
-    <p class="grey">ellen.dietz@spd-in-rosbach.de</p>
-  </div>
+    <div class="grid-container">
+        <div class="grid-item">
+          <mat-icon>person</mat-icon>
+        </div>
+        <div class="grid-item">
+          <p>{{groupLeader}}</p>
+        </div>
+        <div class="grid-item">
+          <mat-icon>email</mat-icon>
+        </div>
+        <div class="grid-item">
+          <p>{{groupContact.email}}</p>
+        </div>
+        <div class="grid-item">
+            <mat-icon>phone</mat-icon>
+          </div>
+          <div class="grid-item">
+            <p>{{groupContact.phone}}</p>
+          </div>
+        <div class="grid-item">
+          <mat-icon>place</mat-icon>
+        </div>
+        <div class="grid-item">
+          <p>
+            {{groupLocation.postCode}} {{groupLocation.city}} - 
+            {{groupLocation.street}} {{groupLocation.houseNumber}} - 
+            {{groupLocation.additionalInformation}}
+          </p>
+        </div>
+      </div>
   

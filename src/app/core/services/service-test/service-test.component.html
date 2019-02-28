@@ -1,4 +1,4 @@
-<div *ngIf="idea | async as thisIdea" >
+<div *ngIf="idea$ | async as thisIdea" >
   <ul>
     <li>{{thisIdea.ideaTitle}}</li>
     <li>{{thisIdea.ideaLocation}}</li>
