@@ -1,0 +1,27 @@
+.inline-block {
+    display: inline-block;
+  }
+  
+.avatar {
+    height: 20px;
+    width: 20px;
+    vertical-align: sub;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.margin-right-2 {
+    margin-right: 4px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .grid-item {
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+  }

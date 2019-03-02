@@ -1,3 +1,9 @@
+<mat-card-header class="center justify">
+    <mat-card-title>{{eventTitle}}</mat-card-title>
+    <mat-card-subtitle>{{eventHost}}</mat-card-subtitle>
+</mat-card-header>
+    <img *ngIf="eventImage" mat-card-image src={{eventImage}} alt="Photo of the {{eventTitle}}" width="200px">
+<!--
 <mat-card class="post-card">
   <div class="divider-margin-bot">
     <mat-card-header class="margin-top">
@@ -34,3 +40,4 @@
     </mat-chip-list>
 </div>
 </mat-card>
+-->

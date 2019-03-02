@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-event-header',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-header.component.css']
 })
 export class EventHeaderComponent implements OnInit {
+  @Input() eventTitle: string;
+  @Input() eventImage: string;
+  @Input() eventHost: string;
+
 
   constructor() { }
 

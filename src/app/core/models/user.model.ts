@@ -16,6 +16,25 @@ export interface User {
     ideas?: string;
     hashtags?: string[];
 
+    notifications?: {
+        notID?: string;
+        notName?: string;
+        notImage?: string;
+        notDate?: string;
+        notIssue?: string;
+        // need to limit notifications or restructure database
+    }[];
+
+    chatsRecent?: {
+        chatID?: string;
+        chatName?: string;
+        chatImage?: string;
+        chatDate?: string;
+        chatMessageLast?: string;
+        chatMessageTot?: string;
+        // need to limit notifications or restructure database
+    }[];
+
     // position
 }
 

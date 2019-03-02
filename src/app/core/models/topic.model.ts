@@ -7,3 +7,7 @@ export interface Topic {
     topicImage?: string;
     topicProtocol?: string;
 }
+
+export interface TopicID extends Topic {
+    id: string;
+}

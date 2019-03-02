@@ -1,4 +1,45 @@
 <app-structure>
-    <app-event-header class="content"></app-event-header>
-    <app-event-content class="content-2"></app-event-content>
+    <div *ngIf="event$ | async as event" >
+        <mat-card>
+            <app-event-header
+                [eventHost]="event.eventHost"
+                [eventImage]="event.eventImage"
+                [eventTitle]="event.eventTitle">
+            </app-event-header>
+                    
+            <mat-card-content>
+                <app-stats
+                    [label1]="participants"
+                    [label2]="tasks"
+                    [label3]="topics"
+                    [label4]="ideas"
+                    [number1]="event.eventParticipants"
+                    [number2]="event.eventTasksTot"
+                    [number3]="event.eventTopicsTot"
+                    [number4]="event.eventIdeasTot">
+                </app-stats>
+
+                <app-event-grid
+                    [eventDate]="event.eventDate"
+                    [eventModerator]="event.eventModerator"
+                    [eventHashtags]="event.eventHashtags"
+                    [eventLocation]="event.eventLocation">
+                </app-event-grid>                    
+             </mat-card-content>
+        </mat-card>
+
+        <mat-card *ngFor="let topic of topics$ | async" class="margin-top-14">
+            <app-event-content
+                [topicTitle]="topic.topicTitle"
+                [topicModerator]="topic.topicModerator"
+                [topicProtocol]="topic.topicProtocol"
+                [topicContent]="topic.topicContent"
+                [topicTimeStart]="topic.topicTimeStart"
+                [topicTimeEnd]="topic.topicTimeEnd">
+            </app-event-content>
+
+            <app-topic-tasks></app-topic-tasks>
+
+        </mat-card>
+    </div>
 </app-structure>

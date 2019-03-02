@@ -1,0 +1,12 @@
+<mat-list-item>
+  <img mat-list-avatar src="{{notImage}}" alt="image of {{notName}}">
+  <h3 mat-line class="primary">{{notName}}</h3><!--subtitle possible-->
+  <p mat-line>
+    <span>{{notIssue}}</span>
+  </p>
+  <div>
+    <p mat-line>
+      <span>{{convertedDate | date: 'MMM d HH:mm' }}</span>
+    </p>
+  </div>
+</mat-list-item>

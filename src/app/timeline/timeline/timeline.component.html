@@ -1,6 +1,6 @@
 <app-structure>
 <div *ngIf="posts">
-<mat-card class="post-card" *ngFor= "let post of posts">
+<mat-card *ngFor= "let post of posts">
   <mat-card-header>
     <img mat-card-avatar src="{{post.profImage}}" class="post-header-image" matTooltip="Profile Tobias Hassebrock">
     <mat-card-title class="pointer">{{post.author}}</mat-card-title>

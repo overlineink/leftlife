@@ -9,6 +9,8 @@ import { SearchComponent } from './search/search.component';
 import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { EventModule } from '../event/event.module';
+import { EventGridComponent } from '../event/event-grid/event-grid.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { SearchFormComponent } from './search-form/search-form.component';
     CommonModule,
     SharedModule,
     CoreModule,
-    SearchRoutingModule
+    SearchRoutingModule,
+    EventModule
   ],
   exports: [
     SearchComponent,

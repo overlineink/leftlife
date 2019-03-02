@@ -1,112 +1,62 @@
-.post-card {
-    margin-left: 14px;
-    max-width: 600px;
-  }
-  
-  .wrapper {
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  .main-container {
-      margin: 75px auto;
-      position: relative;
-      text-align: center;
-  }
-  .content {
-      margin: 14px;
-      text-align: left;
-      display: block;
-  }
-  
-  .primary {
-    color: #d50000;
-  }
-  
-  .inline-block {
-    display: inline-block;
-  }
-  
-  .headline {
-    font-size: 20px;
-    vertical-align: middle;
-  }
-  
-  .margin-right {
-    margin-right: 10px;
-  }
-  
-  .margin-top {
-    margin-top: 14px;
-  }
-  
-  .margin-left {
-    margin-left: 16px;
-  }
-  .pink {
-    background-color: #fef4f3;
-  }
-  
-  .right {
-    text-align: right;
-  }
-  
+.margin-bot {
+  margin-bottom: 90px;
+}
+.float-left {
+  float: left;
+} 
+.inline-block {
+  display: inline-block;
+}
+
+.margin-left {
+  margin-left: 16px;
+}
+
+.width {
+  width: 200px;
+}
+
+.botton {
+  position: fixed;
+  left: 0;
+  bottom: 0px;
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+
+@media (min-width: 375px) {
   .width {
-    width: 200px;
+    width: 250px;
   }
-  
-  .botton {
-    position: fixed;
-    left: 0;
-    bottom: 0px;
-    z-index: 1000;
-    width: 100%;
-    margin-bottom: 55px;
+}
+
+@media (min-width: 425px) {
+  .width {
+    width: 300px;
   }
-  
-  .inline-block {
-    display: inline;
+}
+
+@media (min-width: 768px) {
+  .width {
+    width: 643px;
   }
-  mat-card {
-    padding: 8px;
-    margin: 0px;
+}
+
+@media (min-width:  1024px) {
+  .width {
+    width: 899px;
   }
-  
-  mat-card-subtitle {
-    margin: 0px;
+}
+
+@media (min-width:  1440px) {
+  .width {
+    width: 1315px;
   }
-  
-  p {
-    margin-top: 0px;
-    margin-bottom: 8px;
-  }
-  
-  @media (min-width: 375px) {
-    .width {
-      width: 250px;
-    }
-  }
-  
-  @media (min-width: 425px) {
-    .width {
-      width: 300px;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .width {
-      width: 643px;
-    }
-  }
-  
-  @media (min-width:  1024px) {
-    .width {
-      width: 899px;
-    }
-  }
-  
-  @media (min-width:  1440px) {
-    .width {
-      width: 1315px;
-    }
-  }
+}

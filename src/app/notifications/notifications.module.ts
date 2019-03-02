@@ -6,10 +6,12 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { SearchModule } from '../search/search.module';
+import { NotificationsCardComponent } from './notifications-card/notifications-card.component';
 
 @NgModule({
   declarations: [
-    NotificationsComponent
+    NotificationsComponent,
+    NotificationsCardComponent
   ],
   imports: [
     CommonModule,

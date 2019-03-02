@@ -8,10 +8,6 @@ const eventRoutes: Routes = [
     path: 'event',
     component: EventComponent
   },
-  {
-    path: '**',
-    component: NotFoundComponent
-  }
 ];
 
 @NgModule({

@@ -5,12 +5,16 @@ import { SharedModule } from '../shared/shared.module';
 import { EventHeaderComponent } from './event-header/event-header.component';
 import { EventContentComponent } from './event-content/event-content.component';
 import { EventRoutingModule } from './event-routing.module';
+import { EventGridComponent } from './event-grid/event-grid.component';
+import { TopicTasksComponent } from './topic-tasks/topic-tasks.component';
 
 @NgModule({
   declarations: [
     EventComponent,
     EventHeaderComponent,
     EventContentComponent,
+    EventGridComponent,
+    TopicTasksComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,8 @@ import { EventRoutingModule } from './event-routing.module';
     EventRoutingModule
   ],
   exports: [
-    EventComponent
+    EventComponent,
+    EventGridComponent
   ]
 })
 export class EventModule { }

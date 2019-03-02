@@ -15,36 +15,14 @@
     [number3]="eventTopicsTot"
     [number4]="eventIdeasTot">
   </app-stats>
-  <div class="grid-container">
-    <div class="grid-item">
-      <mat-icon>person</mat-icon>
-    </div>
-    <div class="grid-item">
-      <p>{{eventModerator}}</p>
-    </div>
-    <div class="grid-item">
-      <mat-icon>event</mat-icon>
-    </div>
-    <div class="grid-item">
-      <p>{{convertedDate | date: 'MMM d, y, HH:mm' }}</p>
-    </div>
-    <div class="grid-item">
-      <mat-icon>place</mat-icon>
-    </div>
-    <div class="grid-item">
-      <p>
-        {{eventLocation.postCode}} {{eventLocation.city}} - 
-        {{eventLocation.street}} {{eventLocation.houseNumber}} - 
-        {{eventLocation.additionalInformation}}
-      </p>
-    </div>
-    <div class="grid-item">
-      <mat-icon>work</mat-icon>
-    </div>
-    <div class="grid-item">
-      <app-hashtags [hashtags]="eventHashtags"></app-hashtags>
-    </div>
-  </div>
+
+  <app-event-grid
+    [eventDate]="eventDate"
+    [eventModerator]="eventModerator"
+    [eventHashtags]="eventHashtags"
+    [eventLocation]="eventLocation">
+  </app-event-grid>
+  
 </mat-card-content>
 
 <mat-card-actions class="center">

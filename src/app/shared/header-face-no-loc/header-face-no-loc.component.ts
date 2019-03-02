@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderFaceNoLocComponent implements OnInit {
   @Input() name: string;
-  @Input() userRank: string;
+  @Input() subTitle: string;
   @Input() profilePhoto: string;
   constructor() { }
 

@@ -3,7 +3,9 @@
         <mat-tab-group>
           <mat-tab label="Wiki">
             <mat-card>
-              <app-group-wiki></app-group-wiki>
+              <app-group-wiki
+                [group$]="group$">
+              </app-group-wiki>
             </mat-card>
           </mat-tab>
           <mat-tab label="Stream">

@@ -1,4 +1,13 @@
 export interface Task {
     taskTitle: string;
-    taskExecuter: string;
+    taskTopic: string;
+    taskExecuter: {
+        ID: string;
+        name: string;
+        profilePhoto: string;
+    };
+}
+
+export interface TaskID extends Task {
+    id: string;
 }

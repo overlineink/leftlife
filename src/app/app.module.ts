@@ -33,8 +33,8 @@ import { NotificationsModule } from './notifications/notifications.module';
     GroupModule,
     CoreModule,
     ChatModule,
-    NotificationsModule,
     EventModule,
+    NotificationsModule,
     AppRoutingModule
   ],
   providers: [],

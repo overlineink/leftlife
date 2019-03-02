@@ -7,11 +7,15 @@ import { SharedModule } from '../shared/shared.module';
 import { ChatComponent } from './chat/chat.component';
 import { SearchModule } from '../search/search.module';
 import { ChatRoomComponent } from './chat-room/chat-room.component';
+import { ChatCardComponent } from './chat-card/chat-card.component';
+import { ChatMessageComponent } from './chat-message/chat-message.component';
 
 @NgModule({
   declarations: [
     ChatComponent,
-    ChatRoomComponent
+    ChatRoomComponent,
+    ChatCardComponent,
+    ChatMessageComponent,
   ],
   imports: [
     CommonModule,

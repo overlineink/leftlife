@@ -1,0 +1,12 @@
+<mat-list-item routerLink="/message/1">
+  <img mat-list-avatar src="{{chatImage}}" alt="Image of chat with {{chatName}}">
+  <h3 mat-line class="primary">{{chatName}}</h3><!--subtitle possible-->
+  <p mat-line>
+   <span>{{chatMessageLast}}</span>
+ </p>
+ <div>
+   <p mat-line>
+     <span matBadge="{{chatMessageTot}}" matBadgeOverlap="false">{{convertedDate | date: 'MMM d HH:mm' }}</span>
+   </p>
+ </div>
+</mat-list-item>
