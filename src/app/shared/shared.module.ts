@@ -40,7 +40,7 @@ import {
   MatTreeModule,
   MatFormField,
   MatFormFieldModule,
- } from '../../../node_modules/@angular/material';
+ } from '@angular/material';
 import { StructureComponent } from './structure/structure.component';
 import { BarBotComponent } from './bar-bot/bar-bot.component';
 import { BarBotOutComponent } from './bar-bot-out/bar-bot-out.component';
@@ -58,6 +58,7 @@ import { ActionBarShareComponent } from './action-bar-share/action-bar-share.com
 import { ActionBarPostComponent } from './action-bar-post/action-bar-post.component';
 import { ActionBarShareMapComponent } from './action-bar-share-map/action-bar-share-map.component';
 import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-loc.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-lo
     ActionBarPostComponent,
     ActionBarShareMapComponent,
     HeaderFaceNoLocComponent,
+    FileUploadComponent
   ],
   imports: [
     CommonModule,
@@ -172,7 +174,8 @@ import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-lo
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    FileUploadComponent
   ]
 })
 export class SharedModule { }
