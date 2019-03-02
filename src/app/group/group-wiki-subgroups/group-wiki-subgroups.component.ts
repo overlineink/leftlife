@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Group } from 'src/app/core/models/group.model';
+import { Group } from '@group/group.model';
 
 @Component({
   selector: 'app-group-wiki-subgroups',

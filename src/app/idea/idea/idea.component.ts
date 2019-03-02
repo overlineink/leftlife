@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventModel } from 'src/app/core/models/event.model';
+import { EventModel } from '@event/event.model';
 
 @Component({
   selector: 'app-idea',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Tile } from 'src/app/search/tile.interface';
+import { Tile } from '@search/tile.interface';
 
 @Component({
   selector: 'app-group-events',

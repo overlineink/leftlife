@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Group } from 'src/app/core/models/group.model';
-import { TileA } from 'src/app/search/tile.interface';
+import { Group } from '@group/group.model';
+import { TileA } from '@search/tile.interface';
 
 @Component({
   selector: 'app-group-wiki-grid',
