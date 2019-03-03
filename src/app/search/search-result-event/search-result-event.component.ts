@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { EventID } from 'src/app/core/models/event.model';
-import { Location } from 'src/app/core/models/location.model';
+import { EventID } from '@event/event.model';
+import { Location } from '@models/location.model';
 
 @Component({
   selector: 'app-search-result-event',

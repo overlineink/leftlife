@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from 'src/app/core/models/user.model';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { AuthService } from '@core/auth.service';
 
 @Component({
   selector: 'app-notifications',

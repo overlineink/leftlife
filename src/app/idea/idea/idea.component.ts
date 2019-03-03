@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { EventModel } from 'src/app/core/models/event.model';
+import { EventModel } from '@event/event.model';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Idea } from 'src/app/core/models/idea.model';
-import { IdeasService } from 'src/app/core/services/ideas.service';
+import { Idea } from '@idea/idea.model';
+import { IdeasService } from '@idea/ideas.service';
 
 @Component({
   selector: 'app-idea',

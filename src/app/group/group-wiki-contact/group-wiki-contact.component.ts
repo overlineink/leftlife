@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Location } from 'src/app/core/models/location.model';
+import { Location } from '@models/location.model';
 
 @Component({
   selector: 'app-group-wiki-contact',

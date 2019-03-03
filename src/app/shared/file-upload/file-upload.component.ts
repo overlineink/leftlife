@@ -3,7 +3,7 @@ import { AngularFireUploadTask, AngularFireStorage } from '@angular/fire/storage
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { tap, finalize, takeLast } from 'rxjs/operators';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '@core/auth.service';
 
 @Component({
   selector: 'app-file-upload',

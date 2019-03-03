@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GroupsService } from 'src/app/core/services/groups.service';
+import { GroupsService } from '@group/groups.service';
 import { Observable } from 'rxjs';
-import { Group, GroupID } from 'src/app/core/models/group.model';
+import { Group, GroupID } from '@group/group.model';
 
 @Component({
   selector: 'app-group-wiki',

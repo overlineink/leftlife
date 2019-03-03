@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { EventModel, EventID } from 'src/app/core/models/event.model';
+import { EventModel, EventID } from '@event/event.model';
 
 @Component({
   selector: 'app-group-events',

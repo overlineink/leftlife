@@ -17,14 +17,38 @@ import { ChatModule } from './chat/chat.module';
 import { NotificationsModule } from './notifications/notifications.module';
 import { UploadModule } from './upload/upload.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { environment } from '@environments/environment';
+import { AuthentificationComponent } from './authentification/authentification.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DropZoneDirective } from './drop-zone.directive';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { FileSizePipe } from './file-size.pipe';
+import { ServiceTestComponent } from './service-test/service-test.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
+    AuthentificationComponent,
+    PageNotFoundComponent,
+    DropZoneDirective,
+    FileSizePipe,
+    ServiceTestComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    AngularFireStorageModule,
+    NgxAuthFirebaseUIModule.forRoot(environment.firebase, () => 'leftlife',
+    {
+      enableFirestoreSync: true, // enable/disable autosync users with firestore
+      toastMessageOnAuthSuccess: true, // whether to open/show a snackbar message on auth success - default : true
+      toastMessageOnAuthError: true // whether to open/show a snackbar message on auth error - default : true
+    }),
     LearningModule,
     SharedModule,
     ProfileModule,
@@ -38,6 +62,12 @@ import { UploadModule } from './upload/upload.module';
     EventModule,
     NotificationsModule,
     AppRoutingModule
+  ],
+  exports: [
+    AuthentificationComponent,
+    DropZoneDirective,
+    FileSizePipe,
+    ServiceTestComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

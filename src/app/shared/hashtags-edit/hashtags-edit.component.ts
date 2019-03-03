@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { AuthService } from '@core/auth.service';
 import {MatChipInputEvent} from '@angular/material';
 
 @Component({

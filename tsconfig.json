@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -17,6 +17,18 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@core/*": ["app/core/*"],
+      "@environments/*": ["environments/*"],
+      "@event/*": ["app/event/*"],
+      "@group/*": ["app/group/*"],
+      "@idea/*": ["app/idea/*"],
+      "@models/*": ["app/models/*"], // ⚠ provisional uses
+      "@profile/*": ["app/profile/*"],
+      "@shared/*": ["app/shared/*"],
+      "@search/*": ["app/search/*"],
+      "@upload/*": ["app/upload/*"]
+    }
   }
 }

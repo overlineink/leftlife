@@ -25,6 +25,9 @@ import { UploadPostComponent } from './upload-post/upload-post.component';
     CoreModule,
     SharedModule,
     UploadRoutingModule
+  ],
+  exports: [
+    UploadComponent
   ]
 })
 export class UploadModule { }

@@ -24,9 +24,8 @@ import { EventGridComponent } from '../event/event-grid/event-grid.component';
   imports: [
     CommonModule,
     SharedModule,
-    CoreModule,
-    SearchRoutingModule,
-    EventModule
+    EventModule,
+    SearchRoutingModule
   ],
   exports: [
     SearchComponent,

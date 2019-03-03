@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from '@core/auth.service';
 
 @Component({
   selector: 'app-asynchronous',
@@ -14,9 +14,9 @@ export class AsynchronousComponent implements OnInit {
 
   ngOnInit() {
     this.needsLogin = true;
-    this.auth.getItem().then((authenticated) => {
-      this.needsLogin = !authenticated;
-    });
+    // this.auth.getItem().then((authenticated) => {
+    //   this.needsLogin = !authenticated;
+    // });
   }
 
 }
