@@ -6,6 +6,7 @@
     <mat-card *ngFor="let idea of subIdeas$ | async" class="margin-top-14">
         <app-search-result-idea
           [ideaTitle]="idea.ideaTitle"
+          [ideaID]="idea.id"
           [ideaLocation]="idea.ideaLocation"
           [ideaAuthorName]="idea.ideaAuthor.authorName"
           [ideaDate]="idea.ideaDate"

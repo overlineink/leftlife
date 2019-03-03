@@ -14,6 +14,7 @@ export class SearchResultEventComponent implements OnInit {
   @Input() eventDate: any;
   @Input() eventImage: string;
   @Input() eventModerator: string;
+  @Input() eventID: string;
 
   @Input() eventHashtags: string[];
   @Input() eventIdeas: string;

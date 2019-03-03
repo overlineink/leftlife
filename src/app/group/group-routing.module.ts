@@ -6,6 +6,10 @@ const groupRoutes: Routes = [
   {
     path: 'group',
     component: GroupComponent
+  },
+  {
+    path: 'group/:id',
+    component: GroupComponent
   }
 ];
 

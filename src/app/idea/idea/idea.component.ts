@@ -19,11 +19,16 @@ export class IdeaComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private ideasService: IdeasService
-  ) {
-    this.idea$ = this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
-  }
+  ) {  }
 
   ngOnInit() {
+    // extracts the id from the URL and queries the fitting document
+    this.idea$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.ideasService.getIdea(params.get('id')))
+    );
+
+    // this.idea$ = this.ideasService.getIdea('Fq8S8PpATT3PID84dE88');
   }
 
 }

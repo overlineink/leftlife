@@ -10,6 +10,7 @@ export class SearchResultGroupComponent implements OnInit {
   @Input() groupLevel: string;
   @Input() groupImage: string;
   @Input() groupLeader: string;
+  @Input() groupID: string;
 
   @Input() groupHashtags: string[];
   @Input() groupIdeasTot: string;

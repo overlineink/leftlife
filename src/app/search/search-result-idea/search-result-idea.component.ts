@@ -1,6 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search-result-idea',
@@ -17,10 +15,7 @@ export class SearchResultIdeaComponent implements OnInit {
   @Input() ideaID: string;
   convertedDate: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router
-  ) { }
+  constructor(  ) { }
 
   ngOnInit() {
     this.convertedDate = this.ideaDate.toDate();

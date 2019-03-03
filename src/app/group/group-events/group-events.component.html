@@ -6,6 +6,7 @@
     <mat-card *ngFor="let event of subEvents$ | async" class="margin-top-14">
         <app-search-result-event
             [eventDate]="event.eventDate"
+            [eventID]="event.id"
             [eventTitle]="event.eventTitle"
             [eventHost]="event.eventHost"
             [eventImage]="event.eventImage"

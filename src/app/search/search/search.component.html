@@ -36,6 +36,7 @@
                 [continental]="person.continental"
 
                 [name]="person.displayName"
+                [uid]="person.uid"
                 [profilePhoto]="person.profilePhoto"
                 [hashtags]="person.hashtags"
                 [ideas]="person.ideas"
@@ -51,6 +52,7 @@
           <mat-card>
               <mat-card *ngFor="let idea of ideas$ | async" class="margin-top-14">
                 <app-search-result-idea
+                  [ideaID]="idea.id"
                   [ideaTitle]="idea.ideaTitle"
                   [ideaLocation]="idea.ideaLocation"
                   [ideaAuthorName]="idea.ideaAuthor.authorName"
@@ -72,6 +74,7 @@
                 [groupLevel]="group.groupLevel"
                 [groupImage]="group.groupImage"
                 [groupLeader]="group.groupLeader"
+                [groupID]="group.id"
               
                 [groupHashtags]="group.groupHashtags"
                 [groupIdeasTot]="group.groupIdeasTot"
@@ -90,6 +93,7 @@
             <mat-card *ngFor="let event of events$ | async" class="margin-top-14">
               <app-search-result-event
                 [eventDate]="event.eventDate"
+                [eventID]="event.id"
                 [eventTitle]="event.eventTitle"
                 [eventHost]="event.eventHost"
                 [eventImage]="event.eventImage"

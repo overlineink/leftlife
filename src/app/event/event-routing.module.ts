@@ -5,7 +5,7 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 
 const eventRoutes: Routes = [
   {
-    path: 'event',
+    path: 'event/:id',
     component: EventComponent
   },
 ];

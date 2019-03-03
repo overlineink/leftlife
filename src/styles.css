@@ -26,4 +26,8 @@ body, html {
     background-color: #fef4f3;
 }
 
+.link {
+    text-decoration: none;
+    color: inherit;
+  }
   

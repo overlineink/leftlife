@@ -13,6 +13,7 @@ export class SearchResultPersonComponent implements OnInit {
   @Input() continental: string;
   @Input() profilePhoto: string;
   @Input() userRank: string;
+  @Input() uid: string;
 
   @Input() hashtags: string[];
   @Input() ideas: string;

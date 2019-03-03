@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { EventModel } from 'src/app/core/models/event.model';
+import { EventModel, EventID } from 'src/app/core/models/event.model';
 
 @Component({
   selector: 'app-group-events',
@@ -8,7 +8,7 @@ import { EventModel } from 'src/app/core/models/event.model';
   styleUrls: ['./group-events.component.css']
 })
 export class GroupEventsComponent implements OnInit {
-  @Input() subEvents$: Observable<EventModel[]>;
+  @Input() subEvents$: Observable<EventID[]>;
 
   constructor() { }
 
