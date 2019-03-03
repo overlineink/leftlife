@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { IdeasService } from '../ideas.service';
 import { Observable } from 'rxjs';
-import { Idea, IdeaID } from '../../models/idea.model';
-import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Person } from '../../models/user.model';
-import { UserService } from '../user.service';
-import { EventID, EventModel } from '../../models/event.model';
-import { EventsService } from '../events.service';
-import { GroupID } from '../../models/group.model';
-import { GroupsService } from '../groups.service';
-import { GroupsSubcollectionsService } from '../groups-subcollections.service';
+import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+
+import { IdeasService } from '@idea/ideas.service';
+import { Idea, IdeaID } from '@idea/idea.model';
+import { Person } from '@profile/user.model';
+import { UserService } from '@profile/user.service';
+import { EventID, EventModel } from '@event/event.model';
+import { EventsService } from '@event/events.service';
+import { GroupID } from '@group/group.model';
+import { GroupsService } from '@group/groups.service';
+import { GroupsSubcollectionsService } from '@group/groups-subcollections.service';
 
 @Component({
   selector: 'app-service-test',

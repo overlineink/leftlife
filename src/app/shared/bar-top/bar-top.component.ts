@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
-import { UploadComponent } from 'src/app/upload/upload/upload.component';
+import { UploadComponent } from '@upload/upload/upload.component';
 
 @Component({
   selector: 'app-bar-top',

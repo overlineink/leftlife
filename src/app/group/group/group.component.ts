@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { GroupsService } from 'src/app/core/services/groups.service';
-import { GroupsSubcollectionsService } from 'src/app/core/services/groups-subcollections.service';
+import { GroupsService } from '@group/groups.service';
+import { GroupsSubcollectionsService } from '@group/groups-subcollections.service';
 import { Observable } from 'rxjs';
-import { EventModel, EventID } from 'src/app/core/models/event.model';
-import { Idea, IdeaID } from 'src/app/core/models/idea.model';
-import { GroupID } from 'src/app/core/models/group.model';
+import { EventModel, EventID } from '@event/event.model';
+import { Idea, IdeaID } from '@idea/idea.model';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { GroupID } from '@group/group.model';
 
 @Component({
   selector: 'app-group',

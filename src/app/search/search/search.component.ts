@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { IdeasService } from 'src/app/core/services/ideas.service';
 import { Observable } from 'rxjs';
-import { IdeaID } from 'src/app/core/models/idea.model';
-import { UserService } from 'src/app/core/services/user.service';
-import { Person } from 'src/app/core/models/user.model';
-import { EventID } from 'src/app/core/models/event.model';
-import { EventsService } from 'src/app/core/services/events.service';
-import { GroupID } from 'src/app/core/models/group.model';
-import { GroupsService } from 'src/app/core/services/groups.service';
+
+import { IdeasService } from '@idea/ideas.service';
+import { IdeaID } from '@idea/idea.model';
+import { UserService } from '@profile/user.service';
+import { Person } from '@profile/user.model';
+import { EventID } from '@event/event.model';
+import { EventsService } from '@event/events.service';
+import { GroupID } from '@group/group.model';
+import { GroupsService } from '@group/groups.service';
 
 @Component({
   selector: 'app-search',

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { EventID, EventModel } from '../models/event.model';
-import { Idea, IdeaID } from '../models/idea.model';
+import { EventID, EventModel } from '@event/event.model';
+import { Idea, IdeaID } from '@idea/idea.model';
 
 @Injectable({
   providedIn: 'root'

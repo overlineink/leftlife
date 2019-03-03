@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Group, GroupID } from '../models/group.model';
+import { Group, GroupID } from './group.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Idea, IdeaID } from 'src/app/core/models/idea.model';
+import { Idea, IdeaID } from '@idea/idea.model';
 
 @Component({
   selector: 'app-group-ideas',

@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { AuthService } from '@core/auth.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { User } from 'src/app/core/models/user.model';
+import { User } from '@profile/user.model';
 
 @Component({
   selector: 'app-profile-form',
