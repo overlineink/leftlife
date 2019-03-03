@@ -1,0 +1,62 @@
+<mat-vertical-stepper #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Upload a Photo</ng-template>
+
+        <button  mat-raised-button (click)="fileInput.click()">
+          <span>Select</span>
+          <input #fileInput type="file" (change)="onFileInput($event)" style="display:none;" />
+        </button>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Bearbeiten</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Hashtags</ng-template>
+      <mat-chip-list>
+        <mat-chip>#Europa</mat-chip>
+        <mat-chip>#Digitales</mat-chip>
+      </mat-chip-list>
+      <mat-form-field>
+        <input matInput placeholder="Hashtag" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Text</ng-template>
+      <mat-form-field>
+        <textarea matInput formControlName="secondCtrl" required>Text</textarea>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Upload</ng-template>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-raised-button color="primary" (click)="stepper.reset()">Upload</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>

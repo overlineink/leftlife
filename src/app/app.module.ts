@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ChatModule } from './chat/chat.module';
 import { NotificationsModule } from './notifications/notifications.module';
+import { UploadModule } from './upload/upload.module';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { NotificationsModule } from './notifications/notifications.module';
     GroupModule,
     CoreModule,
     ChatModule,
+    UploadModule,
     EventModule,
     NotificationsModule,
     AppRoutingModule

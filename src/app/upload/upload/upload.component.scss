@@ -1,0 +1,37 @@
+.main-container {
+    margin: 55px auto;
+    position: relative;
+    text-align: center;
+}
+.content {
+    margin: 14px;
+    text-align: left;
+    display: block;
+}
+
+.post-card {
+  max-width: 600px;
+  margin: 14px;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 14px;
+    padding: 14px;
+  }
+
+
+  /*disbables the tab pagination of the tab bar*/
+   /deep/.mat-tab-label {
+    min-width: 0!important;
+    padding: 12px!important;
+    margin: auto!important;
+   }
+
+   /deep/.mat-tab-label-active{
+    min-width: 0!important;
+    padding: 12px!important;
+    margin: auto!important;
+   }
