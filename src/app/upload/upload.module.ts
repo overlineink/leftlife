@@ -7,18 +7,19 @@ import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { UploadHeaderComponent } from './upload-header/upload-header.component';
 import { UploadDialogComponent } from './upload-dialog/upload-dialog.component';
-import { UploadIdeaComponent } from './upload-idea/upload-idea.component';
-import { UploadGroupComponent } from './upload-group/upload-group.component';
-import { UploadPostComponent } from './upload-post/upload-post.component';
+
+import { UploadFormGroupComponent } from './upload-form-group/upload-form-group.component';
+import { UploadFormIdeaComponent } from './upload-form-idea/upload-form-idea.component';
+import { UploadFormPostComponent } from './upload-form-post/upload-form-post.component';
 
 @NgModule({
   declarations: [
     UploadComponent,
     UploadHeaderComponent,
     UploadDialogComponent,
-    UploadIdeaComponent,
-    UploadGroupComponent,
-    UploadPostComponent
+    UploadFormGroupComponent,
+    UploadFormIdeaComponent,
+    UploadFormPostComponent,
   ],
   imports: [
     CommonModule,

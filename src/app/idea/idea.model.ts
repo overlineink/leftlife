@@ -25,7 +25,7 @@ export interface Idea {
     };
     ideaEventsUp?: {
       eventLocal?: {
-        eventTitle: string;
+        eventTitle?: string;
         eventDate?: {
           date?: string;
           time?: string;
@@ -39,7 +39,7 @@ export interface Idea {
       };
       };
       eventDistrict?: {
-        eventTitle: string;
+        eventTitle?: string;
         eventDate?: {
           date?: string;
           time?: string;
@@ -53,7 +53,7 @@ export interface Idea {
       };
       };
       eventRegional?: {
-        eventTitle: string;
+        eventTitle?: string;
         eventDate?: {
           date?: string;
           time?: string;
@@ -67,7 +67,7 @@ export interface Idea {
       };
       }
       eventFederal?: {
-        eventTitle: string;
+        eventTitle?: string;
         eventDate?: {
           date?: string;
           time?: string;
@@ -156,5 +156,5 @@ export interface Idea {
 
 }
 
-export interface IdeaID extends Idea { id: string; }
+export interface IdeaID extends Idea { id?: string; }
 

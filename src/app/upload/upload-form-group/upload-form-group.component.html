@@ -1,0 +1,15 @@
+<form [formGroup]="uploadGroupForm" (ngSubmit)="addGroup()">
+  <mat-form-field class="margin-input">
+    <input matInput type="text" value="" formControlName="groupTitle" placeholder="Add a group Name...">
+  </mat-form-field>
+
+  <mat-form-field class="margin-input">
+    <input matInput type="text" value="" formControlName="groupLevel" placeholder="Add a group level...">
+  </mat-form-field>
+
+  <mat-form-field>
+     <input matInput type="text" value="" formControlName="groupLeader" placeholder="Add a group leader...">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Create Group</button>
+</form>

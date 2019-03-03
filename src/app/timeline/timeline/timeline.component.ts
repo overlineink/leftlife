@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '@models/post.model';
+import { Post } from 'app/post/post.model';
 
 @Component({
   selector: 'app-timeline',
@@ -11,7 +11,7 @@ export class TimelineComponent implements OnInit {
   collapsed: boolean;
 
   constructor() {
-    this.posts = [
+    this.posts = [ /*
       {
         'author': 'Tobias Hassebrock',
         'location': 'Deggendorf',
@@ -68,7 +68,7 @@ export class TimelineComponent implements OnInit {
         ],
         'date': '',
         'postType': 'idea',
-      },
+      }, */
     ];
    }
 

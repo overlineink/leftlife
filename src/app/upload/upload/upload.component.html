@@ -1,20 +1,15 @@
-  <app-upload-header></app-upload-header>
-  <div class="main-container">
-    <div class="content">
-      <div class="post-card wrapper">
+<app-structure>
         <mat-card>
         <mat-tab-group>
           <mat-tab label="Photo">
-            <app-upload-post></app-upload-post>
+            <app-upload-form-post class="center"></app-upload-form-post>
           </mat-tab>
           <mat-tab label="Idee">
-            <app-upload-idea></app-upload-idea>
+            <app-upload-form-idea class="center"></app-upload-form-idea>
           </mat-tab>
           <mat-tab label="Gruppe">
-            <app-upload-group></app-upload-group>
+            <app-upload-form-group class="center"></app-upload-form-group>
           </mat-tab>
         </mat-tab-group>
       </mat-card>
-      </div>
-    </div>
-  </div>
+</app-structure>

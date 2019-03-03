@@ -1,0 +1,15 @@
+<form [formGroup]="uploadIdeaForm" (ngSubmit)="addIdea()">
+    <mat-form-field class="margin-input">
+      <input matInput type="text" value="" formControlName="ideaTitle" placeholder="Add a idea title...">
+    </mat-form-field>
+  
+    <mat-form-field class="margin-input">
+      <input matInput type="text" value="" formControlName="ideaText" placeholder="Add some text...">
+    </mat-form-field>
+  
+    <mat-form-field>
+       <input matInput type="text" value="" formControlName="ideaReason" placeholder="Add some reasons...">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Create Idea</button>
+  </form>

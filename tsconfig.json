@@ -28,7 +28,8 @@
       "@profile/*": ["app/profile/*"],
       "@shared/*": ["app/shared/*"],
       "@search/*": ["app/search/*"],
-      "@upload/*": ["app/upload/*"]
+      "@upload/*": ["app/upload/*"],
+      "@post/*": ["app/post/*"]
     }
   }
 }

@@ -37,4 +37,16 @@ export class GroupsService {
     this.groupDoc = this.angularFirestore.doc<Group>(`groups/${id}`);
     return this.group$ = this.groupDoc.valueChanges();
    }
+
+   addGroup(
+     groupTitle: string,
+     groupLevel: string,
+     groupLeader: string) {
+     const groupsCollection = this.angularFirestore.collection<GroupID>('groups');
+     groupsCollection.add({
+       groupTitle: groupTitle,
+       groupLevel: groupLevel,
+       groupLeader: groupLeader
+     });
+   }
 }

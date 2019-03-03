@@ -22,15 +22,15 @@ export interface Group {
     groupIdeasTot?: string;
     groupEventsTot?: string;
 
-    groupExecutiveBoard: {
-        boardMemberID: string;
-        boardMemberName: string;
-        boardMemberImage: string;
+    groupExecutiveBoard?: {
+        boardMemberID?: string;
+        boardMemberName?: string;
+        boardMemberImage?: string;
     }[];
 
-    groupSubgroups: {
-        boardMemberName: string;
-        boardMemberImage: string;
+    groupSubgroups?: {
+        boardMemberName?: string;
+        boardMemberImage?: string;
     }[];
 
     // subcollections GroupMembers

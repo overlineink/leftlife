@@ -37,4 +37,16 @@ export class IdeasService {
     this.ideaDoc = this.angularFirestore.doc<Idea>(`ideas/${id}`);
     return this.idea$ = this.ideaDoc.valueChanges();
   }
+
+  addIdea(
+    ideaTitle: string,
+    ideaText: string,
+    ideaReason: string) {
+    const ideasCollection = this.angularFirestore.collection<IdeaID>('ideas');
+    ideasCollection.add({
+      ideaTitle: ideaTitle,
+      ideaText: ideaText,
+      ideaReason: ideaReason
+    });
+  }
 }

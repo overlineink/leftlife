@@ -26,6 +26,7 @@ import { DropZoneDirective } from './drop-zone.directive';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FileSizePipe } from './file-size.pipe';
 import { ServiceTestComponent } from './service-test/service-test.component';
+import { PostModule } from './post/post.module';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { ServiceTestComponent } from './service-test/service-test.component';
     CoreModule,
     ChatModule,
     UploadModule,
+    PostModule,
     EventModule,
     NotificationsModule,
     AppRoutingModule

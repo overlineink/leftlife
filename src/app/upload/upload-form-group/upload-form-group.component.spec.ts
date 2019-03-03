@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UploadGroupComponent } from './upload-group.component';
+import { UploadFormGroupComponent } from './upload-form-group.component';
 
-describe('UploadGroupComponent', () => {
-  let component: UploadGroupComponent;
-  let fixture: ComponentFixture<UploadGroupComponent>;
+describe('UploadFormGroupComponent', () => {
+  let component: UploadFormGroupComponent;
+  let fixture: ComponentFixture<UploadFormGroupComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UploadGroupComponent ]
+      declarations: [ UploadFormGroupComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UploadGroupComponent);
+    fixture = TestBed.createComponent(UploadFormGroupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -29,5 +29,8 @@ body, html {
 .link {
     text-decoration: none;
     color: inherit;
-  }
+}
   
+  .margin-input {
+    margin-right: 14px;
+}
