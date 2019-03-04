@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GroupsService } from '@group/groups.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { AuthService } from '@core/auth.service';
+import { User } from '@profile/user.model';
 
 @Component({
   selector: 'app-upload-form-group',
@@ -14,12 +16,25 @@ export class UploadFormGroupComponent implements OnInit {
   groupLevel: string;
   groupLeader: string;
 
+  // user attributes
+  user: User;
+  u: any;
+  userID: string;
+
   constructor(
     private groupsService: GroupsService,
+    private authService: AuthService,
     private formBuilder: FormBuilder
     ) { }
 
   ngOnInit() {
+    // calls getUser() to get a user$
+    this.user = this.authService.getUser();
+    // subscribes to user$ and retrieves uid, email, photoURL
+    this.authService.getUserID();
+    // toDo: Get the full user data
+
+
     this.uploadGroupForm = this.formBuilder.group({
       'groupTitle': {value: ''},
       'groupLevel': {value: ''},
@@ -44,7 +59,10 @@ export class UploadFormGroupComponent implements OnInit {
 
     if (this.groupTitle !== '') {
       this.groupsService.addGroup(this.groupTitle, this.groupLevel, this.groupLeader);
-    }
+    }/*
+    console.log(this.groupTitle, this.groupLevel, this.groupLeader);
+    this.userID = this.authService.getID();
+    console.log(this.authService.user.email);*/
   }
 
 }

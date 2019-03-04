@@ -9,6 +9,10 @@ const profileRoutes: Routes = [
     component: ProfileComponent,
   },
   {
+    path: 'profile/:id',
+    component: ProfileComponent,
+  },
+  {
     path: 'editprofile',
     component: ProfileEditComponent,
     // canActivate: [LoggedInGuard]

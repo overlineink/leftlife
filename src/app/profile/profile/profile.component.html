@@ -1,3 +1,43 @@
+<div *ngIf="person$ | async as user">
+  <app-structure>
+    <mat-card>
+      <app-header-face class="justify center "
+        [local]="user.local"
+        [regional]="user.regional"
+        [federal]="user.federal"
+        [continental]="user.continental"
+
+        [name]="user.displayName"
+        [profilePhoto]="user.profilePhoto">
+      </app-header-face>
+
+      <app-stats
+        [label1]="ideas"
+        [label2]="follower"
+        [label3]="following"
+        [number1]="user.ideas"
+        [number2]="user.followers"
+        [number3]="user.following">
+      </app-stats>
+
+      <div class="center">
+        <app-hashtags [hashtags]="user.hashtags"></app-hashtags>
+      </div>
+
+      <div class="center margin-top">
+        <app-follow-button
+        [followState]="followerState"
+        ></app-follow-button>
+      </div>
+
+    </mat-card>
+      <mat-card  class="card-space">
+        <app-card-photo class="card-space"></app-card-photo>
+        <app-action-bar></app-action-bar>
+      </mat-card >
+  </app-structure>
+</div>
+
 <div *ngIf="authService.user$ | async as user">
   <app-structure>
     <mat-card>

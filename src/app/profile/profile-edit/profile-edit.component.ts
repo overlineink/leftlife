@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile-edit.component.css']
 })
 export class ProfileEditComponent implements OnInit {
-  user: User;
   onLogoutSuccess() {
     // this.router.navigateByUrl('/home');
 }
@@ -20,7 +19,7 @@ export class ProfileEditComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.user = this.authService.getUser();
+    this.authService.getUser();
     this.authService.getUserID();
   }
 

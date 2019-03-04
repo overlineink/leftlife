@@ -60,7 +60,6 @@ import { ActionBarShareMapComponent } from './action-bar-share-map/action-bar-sh
 import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-loc.component';
 import { GridTwoColomnTwoDetailsComponent } from './grid-two-colomn-two-details/grid-two-colomn-two-details.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
-// import { UploadComponent } from '@upload/upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +80,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     ActionBarShareMapComponent,
     HeaderFaceNoLocComponent,
     GridTwoColomnTwoDetailsComponent,
-    FileUploadComponent
+    FileUploadComponent,
   ],
   imports: [
     CommonModule,

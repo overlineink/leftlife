@@ -6,6 +6,7 @@ import { ProfileFormComponent } from './profile-form/profile-form.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { ProfileRoutingModule } from './profile-routing.module';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { FollowModule } from 'app/follow/follow.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
     CommonModule,
     NgxAuthFirebaseUIModule,
     SharedModule,
+    FollowModule,
     ProfileRoutingModule
   ]
 })

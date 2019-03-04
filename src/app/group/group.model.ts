@@ -1,5 +1,9 @@
 export interface Group {
     groupTitle?: string;
+    groupImage?: string;
+    groupHashtags?: string[];
+    groupLevel?: string;
+
     groupLocation?: {
         postCode?: string;
         city?: string;
@@ -11,10 +15,12 @@ export interface Group {
         email?: string;
         phone?: string;
     };
-    groupImage?: string;
-    groupHashtags?: string[];
-    groupLevel?: string;
-    groupLeader?: string;
+
+    groupLeader?: {
+        groupLeaderID?: string;
+        groupLeaderName?: string;
+        groupLeaderImage?: string;
+    };
 
     groupMembersTot?: string;
     groupFollowersTot?: string;

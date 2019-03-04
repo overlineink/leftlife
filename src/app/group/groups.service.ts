@@ -3,6 +3,7 @@ import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument 
 import { Group, GroupID } from './group.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AuthService } from '@core/auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class GroupsService {
   group$: Observable<Group>;
 
   constructor(
-    private readonly angularFirestore: AngularFirestore
+    private readonly angularFirestore: AngularFirestore,
+    private authService: AuthService
   ) { }
 
    getGroups(): Observable<GroupID[]> {
@@ -43,10 +45,25 @@ export class GroupsService {
      groupLevel: string,
      groupLeader: string) {
      const groupsCollection = this.angularFirestore.collection<GroupID>('groups');
-     groupsCollection.add({
-       groupTitle: groupTitle,
-       groupLevel: groupLevel,
-       groupLeader: groupLeader
-     });
+     if (this.authService.userID) {
+      console.log('hey user');
+    }
+    groupsCollection.add({
+      groupTitle: groupTitle,
+      groupLevel: groupLevel,
+      groupImage: groupLeader,
+
+      groupLeader: {
+        groupLeaderID: this.authService.userID,
+        groupLeaderName: this.authService.user.displayName,
+       groupLeaderImage: 'hello' // this.authService.user.local
+      },
+
+ /*   groupExecutiveBoard: {
+        boardMemberID: this.authService.user.uid,
+        boardMemberName: this.authService.user.displayName,
+        boardMember: this.authService.user.profilePhoto
+      }, */
+    });
    }
 }

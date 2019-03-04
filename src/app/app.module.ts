@@ -27,7 +27,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FileSizePipe } from './file-size.pipe';
 import { ServiceTestComponent } from './service-test/service-test.component';
 import { PostModule } from './post/post.module';
-
+import { FollowModule } from './follow/follow.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { PostModule } from './post/post.module';
     PageNotFoundComponent,
     DropZoneDirective,
     FileSizePipe,
-    ServiceTestComponent
+    ServiceTestComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +62,7 @@ import { PostModule } from './post/post.module';
     UploadModule,
     PostModule,
     EventModule,
+    FollowModule,
     NotificationsModule,
     AppRoutingModule
   ],
