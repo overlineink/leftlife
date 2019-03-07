@@ -16,7 +16,9 @@ export class AuthService {
   constructor(
     private angularFireAuth: AngularFireAuth,
     private angularFirestore: AngularFirestore,
-  ) {}
+  ) {
+    this.getUser();
+  }
   // gets the user document. Needs to be called before get userID()
   getUser(): any { // don´t understand what gets returned. Shouldn't it return a Observable<User>?
     this.user$ = this.angularFireAuth.authState.pipe(

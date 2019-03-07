@@ -1,3 +1,41 @@
+<button mat-raised-button (click)="follow()" >Follow</button>
+<button mat-raised-button (click)="unfollow()">Unfollow</button>
+
+<div *ngIf="followState === true">
+  <p>hello Doc</p>
+</div>
+
+<div *ngIf="followState === false">
+    <p>No doc</p>
+  </div>
+
+  <div *ngIf="followStateA | async">
+    <p>hello Doc</p>
+  </div>
+  
+  <div *ngIf="followStateA | async">
+      <p>No doc</p>
+    </div>
+
+<p>Check FollowTest</p>
+<div *ngIf="follow$ | async as follow" >
+  <p>Follow Doc test</p>
+  <ul>
+    <li>{{follow.followName}}</li>
+    <li>{{follow.id}}</li>
+</ul>
+<img  width="200px" src={{follow.followImage}}> 
+</div>
+
+<p>Followers</p>
+<div *ngFor="let follow of follower$ | async">
+  <ul>
+      <li>{{follow.followName}}</li>
+      <li>{{follow.id}}</li>
+  </ul>
+  <img  width="200px" src={{follow.followImage}}> 
+</div>
+
 <div *ngFor="let event of subEvents$ | async">
     <p>Subevents</p>
     <ul>

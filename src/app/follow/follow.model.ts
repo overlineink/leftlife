@@ -4,5 +4,5 @@ export interface Follow {
 }
 
 export interface FollowID extends Follow {
-    followID?: string;
+    id?: string;
 }
