@@ -12,7 +12,7 @@ If you would like to support this project, use GitHub or write me an email: tobi
 1. Framework: Angular (https://angular.io)
 2. Design: Angular Material(https://material.angular.io)
 3. Backend API: AngularFire2 (https://github.com/angular/angularfire2)
-4. Backend: Firebase (https://firebase.google.com/)
+4. Backend: Firebase & cloud functions (https://firebase.google.com/)
 5. Authentication: (https://ngx-auth-firebaseui.firebaseapp.com)
 
 # Current Main Task
