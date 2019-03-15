@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { FollowID, Follow } from './follow.model';
+import { FollowID, Follow } from '@follow/follow.model';
 import { AngularFirestoreCollection, AngularFirestoreDocument, AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 

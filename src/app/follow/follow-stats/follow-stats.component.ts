@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { FollowDialogComponent } from '../follow-dialog/follow-dialog.component';
+import { FollowDialogComponent } from '@follow/follow-dialog/follow-dialog.component';
 
 @Component({
   selector: 'app-follow-stats',

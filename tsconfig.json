@@ -29,7 +29,8 @@
       "@shared/*": ["app/shared/*"],
       "@search/*": ["app/search/*"],
       "@upload/*": ["app/upload/*"],
-      "@post/*": ["app/post/*"]
+      "@post/*": ["app/post/*"],
+      "@follow/*": ["app/follow/*"],
     }
   }
 }

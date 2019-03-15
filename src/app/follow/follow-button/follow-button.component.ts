@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProfileFollowService } from '../profile-follow.service';
+import { ProfileFollowService } from '@follow/profile-follow.service';
 
 @Component({
   selector: 'app-follow-button',
