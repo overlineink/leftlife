@@ -11,8 +11,8 @@ export interface User {
     federal?: string;
     continental?: string;
 
-    followers?: string;
-    following?: string;
+    followers?: number;
+    following?: number;
     ideas?: string;
     hashtags?: string[];
 
