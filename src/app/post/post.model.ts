@@ -8,6 +8,7 @@ export interface Post {
     postHashtags?: Object[];
     postText?: string;
     postDate?: string;
+    postCommentsTot?: string;
 }
 
 export interface PostID extends Post {

@@ -2,6 +2,6 @@
     <ngx-auth-firebaseui
     [providers]="['google']"
     [messageOnAuthSuccess]="messageOnSuccess"
-    (onSuccess)="onSuccessNavigate($event)"
+    (onSuccess)="onSuccess($event)"
     (onError)="printError($event)"></ngx-auth-firebaseui>
 </app-structure>

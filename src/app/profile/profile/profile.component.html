@@ -1,6 +1,7 @@
 <div *ngIf="person$ | async as user">
   <app-structure>
     <mat-card>
+      <!--toDo: Does not appear, when profilePhoto does not exist-->
       <app-header-face class="justify center "
         [local]="user.local"
         [regional]="user.regional"

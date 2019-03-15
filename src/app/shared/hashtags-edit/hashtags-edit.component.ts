@@ -45,7 +45,7 @@ export class HashtagsEditComponent implements OnInit, OnChanges {
       // this.authService.updateUser({'hashtags': this.hashtags});
     }
   }
-
+  // toDO: does not work if hashatags: array[] does not exist, e.g right now when user logs in
   add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;

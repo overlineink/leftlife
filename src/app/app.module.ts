@@ -28,6 +28,7 @@ import { FileSizePipe } from './file-size.pipe';
 import { ServiceTestComponent } from './service-test/service-test.component';
 import { PostModule } from './post/post.module';
 import { FollowModule } from './follow/follow.module';
+import { CommentsModule } from './comments/comments.module';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { FollowModule } from './follow/follow.module';
     PostModule,
     EventModule,
     FollowModule,
+    CommentsModule,
     NotificationsModule,
     AppRoutingModule
   ],

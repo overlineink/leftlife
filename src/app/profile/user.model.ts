@@ -1,6 +1,6 @@
 export interface User {
-    uid: string;
-    email: string;
+    uid?: string;
+    email?: string;
     photoURL?: string;
     profilePhoto?: string;
     displayName?: string;
@@ -39,5 +39,5 @@ export interface User {
 }
 
 export interface Person extends User {
-    id: string;
+    id?: string;
 }
