@@ -29,8 +29,8 @@ export class AuthentificationComponent implements OnInit {
   onSuccess(user) {
     this.router.navigateByUrl('/profile');
     // custom user data is not support on ngx firebase auth
-/*
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/BqQ3bSWlBSdGA2vTsGD6kFxgy2a2`);
 
     const data = {
       uid: user.uid,
@@ -40,9 +40,12 @@ export class AuthentificationComponent implements OnInit {
 
       // set custom data
       local: user.local,
+      regional: user.regional,
+      federal: user.federal,
+      profilePhoto: user.profilePhoto
     };
 
-    return userRef.set(data, { merge: true }); */
+    return userRef.set(data, { merge: true });
   }
 
 }

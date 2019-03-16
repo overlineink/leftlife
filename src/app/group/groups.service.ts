@@ -50,13 +50,17 @@ export class GroupsService {
     }
     groupsCollection.add({
       groupTitle: groupTitle,
-      groupLevel: groupLevel,
-      groupImage: groupLeader,
+      // groupLevel: groupLevel,
+      // groupImage: groupLeader,
+
+      groupContact: {
+        email: this.authService.user.email
+    },
 
       groupLeader: {
         groupLeaderID: this.authService.userID,
         groupLeaderName: this.authService.user.displayName,
-       groupLeaderImage: 'hello' // this.authService.user.local
+      // groupLeaderImage: this.authService.user.local
       },
 
  /*   groupExecutiveBoard: {

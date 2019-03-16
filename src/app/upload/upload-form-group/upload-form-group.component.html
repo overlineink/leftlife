@@ -1,4 +1,4 @@
-<form [formGroup]="uploadGroupForm" (ngSubmit)="addGroup()">
+<form [formGroup]="uploadGroupForm" (ngSubmit)="test()">
   <mat-form-field class="margin-input">
     <input matInput type="text" value="" formControlName="groupTitle" placeholder="Add a group Name...">
   </mat-form-field>
@@ -13,3 +13,15 @@
 
   <button mat-raised-button color="primary" type="submit">Create Group</button>
 </form>
+
+<p>hello user</p>
+<div *ngIf="user">
+  <h3>Howdy, {{ user.displayName }}</h3>
+  <p> {{user | json}}</p>
+</div>
+
+<p>hello user$</p>
+<div *ngIf="user$ | async as user$">
+  <h3>Howdy, {{ user$.displayName }}</h3>
+  <p> {{user$ | json}}</p>
+</div>

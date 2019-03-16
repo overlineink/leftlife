@@ -33,6 +33,7 @@ export class AuthService {
         }
       })
     );
+    return this.user$;
   }
   // subscribes to the logged in User$ document fetched by getUser and saves the UserID
   // after some time (why? when?) I can use the user and the userID property
@@ -46,6 +47,7 @@ export class AuthService {
         this.userID = user$.uid;
         this.user = user$;
         console.log(this.user);
+        console.log(this.user.federal);
         console.log('saved id: ' + this.userID);
         return this.user;
       } else {

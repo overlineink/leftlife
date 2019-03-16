@@ -1,11 +1,15 @@
 export interface Post {
-    postAuthor?: string;
+    postAuthor?: {
+        name?: string;
+        uid?: string;
+        profilePhoto?: string;
+    };
     postLocation?: string;
     postImage?: string;
     postLikes?: string;
     postComments?: string;
     postType?: string;
-    postHashtags?: Object[];
+    postHashtags?: string[];
     postText?: string;
     postDate?: string;
     postCommentsTot?: string;

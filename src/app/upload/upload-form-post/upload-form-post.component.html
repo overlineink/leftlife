@@ -1,15 +1,21 @@
 <form [formGroup]="uploadPostForm" (ngSubmit)="addPost()">
     <mat-form-field class="margin-input">
-      <input matInput type="text" value="" formControlName="postText" placeholder="Add some text...">
+      <textarea matInput matTextareaAutosize type="text" value="" formControlName="postText" placeholder="Add some text...">
+      </textarea>
     </mat-form-field>
-  
-    <mat-form-field class="margin-input">
-      <input matInput type="text" value="" formControlName="postAuthor" placeholder="Who is the author?">
-    </mat-form-field>
-  
-    <mat-form-field>
-       <input matInput type="text" value="" formControlName="postLocation" placeholder="From where do you write?">
-    </mat-form-field>
+    <br>
+    <app-hashtags-edit
+      [hashtags]="hashtags"
+      [inputPlaceholder]="inputHashtagsPlaceholder"
+      [editMode]="editMode">
+    </app-hashtags-edit>
+    <br>
+    <app-file-upload
+      zoneName="Post Picture Drop Zone"
+      buttonName="Upload Post Picture"
+      previewName="Post Picture">>
+    </app-file-upload>
+    <br>
   
     <button mat-raised-button color="primary" type="submit">Create Post</button>
   </form>
