@@ -26,7 +26,7 @@
         <app-hashtags [hashtags]="user.hashtags"></app-hashtags>
       </div>
 
-      <div class="center margin-top">
+      <div *ngIf="user.uid != userFollow.uid" class="center margin-top">
         <app-follow-button
           [followedUserID]="user.uid"
           [followedUserName]="user.displayName"
@@ -37,6 +37,11 @@
         </app-follow-button>
       </div>
 
+      <div *ngIf="user.uid == userFollow.uid" class="center margin-top">
+          <button mat-raised-button color="primary" class="margin-right"
+          (click)="editProfile()">Edit Profile</button>
+        </div>
+
     </mat-card>
       <mat-card  class="card-space">
         <app-card-photo class="card-space"></app-card-photo>
@@ -44,7 +49,7 @@
       </mat-card >
   </app-structure>
 </div>
-
+<!--
 <div *ngIf="authService.user$ | async as user">
   <app-structure>
     <mat-card>
@@ -84,5 +89,5 @@
   </app-structure>
 </div>
 </div>
-
+-->
     

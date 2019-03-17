@@ -23,6 +23,11 @@ export class ProfileComponent implements OnInit {
   // user attributes
   user$: Observable<User>;
 
+  // test
+  test = false;
+  testA = false;
+
+
   editProfile() {
     this.router.navigateByUrl('/editprofile');
   }

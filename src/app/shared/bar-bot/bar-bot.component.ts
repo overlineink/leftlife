@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AuthService } from '@core/auth.service';
+import { Observable } from 'rxjs';
+import { User } from '@profile/user.model';
 
 @Component({
   selector: 'app-bar-bot',
@@ -12,9 +15,15 @@ export class BarBotComponent implements OnInit {
   @Input() myGroup: string;
   @Input() myProfile: string;
 
-  constructor() { }
+  user$: Observable<User>;
+  userID: string;
+
+  constructor(private authService: AuthService) {
+    this.user$ = this.authService.getUser();
+   }
 
   ngOnInit() {
+    console.log('user id bot bar ' + this.user$);
     this.groupNotifications = 5;
     this.notifications = 3;
     this.messages = 5;
