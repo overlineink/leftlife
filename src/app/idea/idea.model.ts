@@ -7,12 +7,12 @@ export interface Idea {
     ideaText?: string;
     ideaReason?: string;
     ideaHashtags?: string[];
-    ideaDate?: string;
+    ideaDate?: Date;
     ideaLocation?: string;
 
-    ideaLikesTot?: string;
-    ideaProposalsTot?: string;
-    ideaSupportersTot?: string;
+    ideaLikesTot?: number;
+    ideaProposalsTot?: number;
+    ideaSupportersTot?: number;
 
     ideaAuthor?: {
       authorID?: string,

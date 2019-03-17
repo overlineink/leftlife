@@ -1,15 +1,43 @@
 <form [formGroup]="uploadIdeaForm" (ngSubmit)="addIdea()">
     <mat-form-field class="margin-input">
-      <input matInput type="text" value="" formControlName="ideaTitle" placeholder="Add a idea title...">
+      <input matInput type="text" value="" formControlName="ideaTitle" placeholder="Add an idea title...">
     </mat-form-field>
   
     <mat-form-field class="margin-input">
-      <input matInput type="text" value="" formControlName="ideaText" placeholder="Add some text...">
+      <input matInput type="text" value="" formControlName="ideaSubtitle" placeholder="Add an subtitle...">
     </mat-form-field>
-  
-    <mat-form-field>
-       <input matInput type="text" value="" formControlName="ideaReason" placeholder="Add some reasons...">
+    <br>
+
+    <mat-form-field class="margin-input">
+      <textarea matInput matTextareaAutosize type="text" value="" formControlName="ideaText" placeholder="Add some text...">
+      </textarea>
     </mat-form-field>
+    <br>
+
+    <mat-form-field class="margin-input">
+      <textarea matInput matTextareaAutosize type="text" value="" formControlName="ideaReason" placeholder="Add some reasons...">
+      </textarea>
+    </mat-form-field>
+    <br>
+
+    <app-hashtags-edit
+      [hashtags]="ideaHashtags"
+      [inputPlaceholder]="inputHashtagsPlaceholder"
+      [editMode]="editMode">
+    </app-hashtags-edit>
+    <br>
+
+    <app-uploader
+      [buttonName]="'Upload an idea image'"
+      (downloadURL)="assignImageUrl($event)">
+    </app-uploader>
+    <br>
+
+    <app-uploader
+      [buttonName]="'Upload an idea video'"
+      (downloadURL)="assignVideoUrl($event)">
+    </app-uploader>
+    <br>
   
     <button mat-raised-button color="primary" type="submit">Create Idea</button>
-  </form>
+</form>

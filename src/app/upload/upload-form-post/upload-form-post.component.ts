@@ -12,18 +12,20 @@ import { UploadPostService } from '@upload/upload-post.service';
   styleUrls: ['./upload-form-post.component.css']
 })
 export class UploadFormPostComponent implements OnInit {
-  // uploadPostForm attributes
+  // user attributes
   user$: Observable<User>;
+
+  // uploadPostForm attributes
   uploadPostForm: FormGroup;
   postText: string;
   postDate: Date;
 
+  downloadURL: string;
   hashtags: string[];
   inputHashtagsPlaceholder: string;
   editMode = true;
 
   constructor(
-    private postService: PostService,
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private uploadPostService: UploadPostService
@@ -46,13 +48,9 @@ export class UploadFormPostComponent implements OnInit {
 
   addPost() {
     this.postText = this.getPostText.value;
-
     this.postDate = new Date();
-    console.log(this.postDate);
-    console.log('clicked');
 
     if (this.postText !== '') {
-      console.log('data');
       this.user$.subscribe(user => {
         this.uploadPostService.addPost(
           user.uid,
@@ -60,11 +58,15 @@ export class UploadFormPostComponent implements OnInit {
           user.profilePhoto,
           this.postText,
           this.hashtags,
-          'postImage', // include upload Photo
+          this.downloadURL, // 'postImage', // include upload Photo
           this.postDate // get Time
         );
       });
     }
+  }
+
+  assign(url) {
+    this.downloadURL = url;
   }
 
 }

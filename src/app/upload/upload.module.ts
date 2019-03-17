@@ -28,7 +28,7 @@ import { UploadFormPostComponent } from './upload-form-post/upload-form-post.com
     UploadRoutingModule
   ],
   exports: [
-    UploadComponent
+    UploadComponent,
   ]
 })
 export class UploadModule { }

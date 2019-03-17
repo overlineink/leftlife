@@ -44,9 +44,9 @@ export class PostService {
     postLocation: string) {
     const postCollection = this.angularFirestore.collection<PostID>('posts');
     postCollection.add({
-      postText: postText,
-      postAuthor: postAuthor,
-      postLocation: postLocation
+      // postText: postText,
+      // postAuthor: postAuthor,
+      // postLocation: postLocation
     });
   }
 }

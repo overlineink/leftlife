@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { AuthService } from '@core/auth.service';
 import { User } from '@profile/user.model';
 import { Observable } from 'rxjs';
+import { UploadGroupService } from '@upload/upload-group.service';
 
 @Component({
   selector: 'app-upload-form-group',
@@ -11,88 +12,82 @@ import { Observable } from 'rxjs';
   styleUrls: ['./upload-form-group.component.css']
 })
 export class UploadFormGroupComponent implements OnInit {
+  // user attributes
+  user$: Observable<User>;
+
   // uploadGroupForm attributes
   uploadGroupForm: FormGroup;
   groupTitle: string;
-  groupLevel: string;
+  groupImageURL: string;
   groupLeader: string;
+  groupHashtags: string[];
+  groupDate: Date;
+  inputHashtagsPlaceholder: string;
+  editMode = true;
 
-  // user attributes
-  user$: Observable<User>;
-  user: any;
-  u: any;
-  userID: string;
+  groupEmail: string;
+  groupPhone: string;
 
   constructor(
-    private groupsService: GroupsService,
+    private uploadGroupService: UploadGroupService,
     private authService: AuthService,
     private formBuilder: FormBuilder
     ) {
-          // calls getUser() to get a user$
-    this.user$ = this.authService.getUser();
-    // subscribes to user$ and retrieves uid, email, photoURL
-    this.authService.getUserID();
-    // toDo: Get the full user data
-     }
+      this.user$ = this.authService.getUser();
+    }
 
   ngOnInit() {
-    this.user = this.test;
-
-
     this.uploadGroupForm = this.formBuilder.group({
       'groupTitle': {value: ''},
-      'groupLevel': {value: ''},
-      'groupLeader': {value: ''},
+      'groupEmail': {value: ''},
+      'groupPhone': {value: ''}
     });
+    this.groupHashtags = [];
+    this.inputHashtagsPlaceholder = 'Add Hashtags';
   }
 
   // gets the value of the form
   get getGroupTitle() {
     return this.uploadGroupForm.get('groupTitle');
   }
-  get getGroupLevel() {
-    return this.uploadGroupForm.get('groupLevel');
-  } get getGroupLeader() {
-    return this.uploadGroupForm.get('groupLeader');
+  get getGroupEmail() {
+    return this.uploadGroupForm.get('groupEmail');
+  }
+  get getGroupPhone() {
+    return this.uploadGroupForm.get('groupPhone');
   }
 
   addGroup() {
     this.groupTitle = this.getGroupTitle.value;
-    this.groupLevel = this.getGroupTitle.value;
-    this.groupLeader = this.getGroupTitle.value;
+    this.groupEmail = this.getGroupEmail.value;
+    this.groupPhone = this.getGroupPhone.value;
+    this.groupDate = new Date();
+
 
     if (this.groupTitle !== '') {
-      this.groupsService.addGroup(this.groupTitle, this.groupLevel, this.groupLeader);
-    }/*
-    console.log(this.groupTitle, this.groupLevel, this.groupLeader);
-    this.user = this.authService.getUserID();
-    console.log(this.authService.user.email);
-    console.log(this.authService.user.uid);
-    console.log(this.user.photoURL);
-    console.log(this.user.displayName);
-    console.log(this.user.local);
-*/
+      this.user$.subscribe(user => {
+        this.uploadGroupService.addGroup(
+          this.groupTitle,
+          this.groupImageURL,
+          this.groupHashtags,
+          this.groupDate,
+
+          user,
+
+          1,
+          0,
+          0,
+          0,
+
+          this.groupEmail,
+          this.groupPhone
+        );
+      });
+    }
   }
 
-  test() {
-    this.groupTitle = this.getGroupTitle.value;
-    this.groupLevel = this.getGroupTitle.value;
-    this.groupLeader = this.getGroupTitle.value;
-
-    this.user$.subscribe(
-      user$ => {
-        console.log(user$.email);
-        console.log(user$.local);
-        this.add(user$.profilePhoto, this.groupLevel, this.groupLeader);
-      }
-    );
-  }
-
-  add(title: string,
-    image: string,
-    leader: string) {
-    console.log('click');
-    this.groupsService.addGroup(title, image, leader);
+  assignImageUrl(url) {
+    this.groupImageURL = url;
   }
 
 }

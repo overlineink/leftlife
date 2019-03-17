@@ -3,6 +3,7 @@ export interface Group {
     groupImage?: string;
     groupHashtags?: string[];
     groupLevel?: string;
+    groupCreated?: Date;
 
     groupLocation?: {
         postCode?: string;
@@ -22,11 +23,11 @@ export interface Group {
         groupLeaderImage?: string;
     };
 
-    groupMembersTot?: string;
-    groupFollowersTot?: string;
+    groupMembersTot?: number;
+    groupFollowersTot?: number;
 
-    groupIdeasTot?: string;
-    groupEventsTot?: string;
+    groupIdeasTot?: number;
+    groupEventsTot?: number;
 
     groupExecutiveBoard?: {
         boardMemberID?: string;
@@ -35,8 +36,8 @@ export interface Group {
     }[];
 
     groupSubgroups?: {
-        boardMemberName?: string;
-        boardMemberImage?: string;
+        subgroupsName?: string;
+        subgroupsImage?: string;
     }[];
 
     // subcollections GroupMembers

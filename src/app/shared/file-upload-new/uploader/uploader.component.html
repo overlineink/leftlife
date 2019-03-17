@@ -1,0 +1,20 @@
+<div class="dropzone"
+  appDropzone
+  (hovered)="toggleHover($event)"
+  (dropped)="onDrop($event)"
+  [class.hovering]="isHovering">
+
+  <p>Drag and Drop a File</p>
+
+  <button mat-raised-button color="primary" (click)="photoInput.click()">{{buttonName}}
+    <input hidden color="primary" #photoInput class="file-input" type="file" (change)="onDrop($event.target.files)">
+  </button>
+</div>
+
+<h3>Uploads</h3>
+
+<div *ngFor="let file of files">
+  <app-upload-task [file]="file"
+    (finishedURL)="finishedURL($event)">
+  </app-upload-task>
+</div>

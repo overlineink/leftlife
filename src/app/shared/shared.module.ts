@@ -60,6 +60,9 @@ import { ActionBarShareMapComponent } from './action-bar-share-map/action-bar-sh
 import { HeaderFaceNoLocComponent } from './header-face-no-loc/header-face-no-loc.component';
 import { GridTwoColomnTwoDetailsComponent } from './grid-two-colomn-two-details/grid-two-colomn-two-details.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { UploadTaskComponent } from './file-upload-new/upload-task/upload-task.component';
+import { UploaderComponent } from './file-upload-new/uploader/uploader.component';
+import { DropzoneDirective } from './file-upload-new/dropzone.directive';
 
 @NgModule({
   declarations: [
@@ -81,6 +84,9 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     HeaderFaceNoLocComponent,
     GridTwoColomnTwoDetailsComponent,
     FileUploadComponent,
+    UploadTaskComponent,
+    UploaderComponent,
+    DropzoneDirective
   ],
   imports: [
     CommonModule,
@@ -142,6 +148,9 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     HashtagsComponent,
     ActionBarComponent,
     GridTwoColomnTwoDetailsComponent,
+    UploadTaskComponent,
+    UploaderComponent,
+    DropzoneDirective,
 
     MatAutocompleteModule,
     MatBadgeModule,

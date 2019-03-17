@@ -1,27 +1,30 @@
-<form [formGroup]="uploadGroupForm" (ngSubmit)="test()">
+<form [formGroup]="uploadGroupForm" (ngSubmit)="addGroup()">
   <mat-form-field class="margin-input">
     <input matInput type="text" value="" formControlName="groupTitle" placeholder="Add a group Name...">
   </mat-form-field>
+  <br>
 
   <mat-form-field class="margin-input">
-    <input matInput type="text" value="" formControlName="groupLevel" placeholder="Add a group level...">
+    <input matInput type="text" value="" formControlName="groupEmail" placeholder="Add a group email...">
   </mat-form-field>
+  
+  <mat-form-field class="margin-input">
+    <input matInput type="text" value="" formControlName="groupPhone" placeholder="Add a group phone number...">
+  </mat-form-field>
+  <br>
 
-  <mat-form-field>
-     <input matInput type="text" value="" formControlName="groupLeader" placeholder="Add a group leader...">
-  </mat-form-field>
+  <app-hashtags-edit
+      [hashtags]="groupHashtags"
+      [inputPlaceholder]="inputHashtagsPlaceholder"
+      [editMode]="editMode">
+  </app-hashtags-edit>
+  <br>
+
+  <app-uploader
+    [buttonName]="'Upload a group image'"
+    (downloadURL)="assignImageUrl($event)">
+  </app-uploader>
+  <br>
 
   <button mat-raised-button color="primary" type="submit">Create Group</button>
 </form>
-
-<p>hello user</p>
-<div *ngIf="user">
-  <h3>Howdy, {{ user.displayName }}</h3>
-  <p> {{user | json}}</p>
-</div>
-
-<p>hello user$</p>
-<div *ngIf="user$ | async as user$">
-  <h3>Howdy, {{ user$.displayName }}</h3>
-  <p> {{user$ | json}}</p>
-</div>
