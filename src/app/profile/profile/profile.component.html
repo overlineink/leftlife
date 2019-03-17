@@ -1,4 +1,5 @@
-<div *ngIf="person$ | async as user">
+<div *ngIf="user$ | async as userFollow">
+<div *ngIf="profileOwner$ | async as user">
   <app-structure>
     <mat-card>
       <!--toDo: Does not appear, when profilePhoto does not exist-->
@@ -25,10 +26,15 @@
         <app-hashtags [hashtags]="user.hashtags"></app-hashtags>
       </div>
 
-      <div class="center margin-top"><!--        [followState]="followerState"
-      -->
+      <div class="center margin-top">
         <app-follow-button
-        ></app-follow-button>
+          [followedUserID]="user.uid"
+          [followedUserName]="user.displayName"
+          [followedUserImage]="user.profilePhoto"
+          [followerID]="userFollow.uid"
+          [followerName]="userFollow.displayName"
+          [followerImage]="userFollow.profilePhoto">
+        </app-follow-button>
       </div>
 
     </mat-card>
@@ -76,6 +82,7 @@
         <app-action-bar></app-action-bar>
       </mat-card >
   </app-structure>
+</div>
 </div>
 
     

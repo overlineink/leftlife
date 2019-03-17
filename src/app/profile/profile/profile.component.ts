@@ -12,13 +12,16 @@ import { UserService } from '@profile/user.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  // static attributes of every profile
   ideas: string;
   follower: string;
   following: string;
 
-  person$: Observable<User>;
-  userEqualsProfile: boolean;
-  followerState: boolean;
+  // attributes of the requested profile
+  profileOwner$: Observable<User>;
+
+  // user attributes
+  user$: Observable<User>;
 
   editProfile() {
     this.router.navigateByUrl('/editprofile');
@@ -35,18 +38,14 @@ export class ProfileComponent implements OnInit {
     }
 
   ngOnInit() {
+    this.user$ = this.authService.getUser();
+
     // retrieves the user id from the URL and requests the fitting user doc
-    this.person$ = this.route.paramMap.pipe(
+    this.profileOwner$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.userService.getPerson(params.get('id')),
       )
     );
-    // toDo: Get Follower Status
-    this.followerState = true;
-
-    // get's user data to compare if profile and user are equal
-    this.authService.getUser();
-    this.authService.getUserID();
   }
 
 }
