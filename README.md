@@ -2,30 +2,27 @@
 
 The goal of this project is to build an application which supports political parties and their members to reflect their real-life decisions on a digital platform, make political administration more efficient and scale politics on a global level.
 
-The final result should be similar to this prototype:
-(https://xd.adobe.com/view/4934154e-d639-45d7-47ab-212c20ac9258-3f05/)
+_The final result should be similar to this [prototype](https://xd.adobe.com/view/4934154e-d639-45d7-47ab-212c20ac9258-3f05/)_
+
+<img src="public/leftlife-preview.jpg">
+<img src="public/leftlife-preview-timeline.jpg">
 
 # Contact
-If you would like to support this project, use GitHub or write me an email: tobias.hassebrock@gmail.com
+If you would like to support this project, see [Contributing Guide](docs/tutorials/contributing.md) or write me an email: <a href="mailto:tobias.hassebrock@gmail.com">tobias.hassebrock@gmail.com</a>
 
-# Current Dependencies
-1. Framework: Angular (https://angular.io)
-2. Design: Angular Material(https://material.angular.io)
-3. Backend API: AngularFire2 (https://github.com/angular/angularfire2)
-4. Backend: Firebase & cloud functions (https://firebase.google.com/)
-5. Authentication: (https://ngx-auth-firebaseui.firebaseapp.com)
-
-# Current Main Task
-1. Create search systems
-2. Build a Like system
-3. Build a Comment system
+# Technology Stack
+1. [Angular 7+](https://angular.io)
+2. [Angular Material](https://material.angular.io)
+3. [AngularFire2](https://github.com/angular/angularfire2)
+4. [Firebase & Cloud Functions](https://firebase.google.com/)
+5. [NGX Firebase Auth UI](https://ngx-auth-firebaseui.firebaseapp.com)
 
 # Contributing
-> “Alone we can do so little; together we can do so much.” -Helen Keller
+> “Alone we can do so little; together we can do so much.” - Helen Keller
 
 #### ⚠ Rookie? Don't worry!
 For the first contribution in Github, I recommend see the **Fireship.io** lesson 👉 [How to Participate on Github?](https://fireship.io/snippets/git-how-to-participate-on-github/)
 
-#### Project tour
-
-⚠ This project will suffer changes.
+* [🚀 Getting started](docs/tutorials/set-up.md)
+* [📃 Current Tasks](docs/tutorials/tasks.md)
+* [📖 Full Documentation](docs).
