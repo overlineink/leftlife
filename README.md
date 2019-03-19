@@ -16,10 +16,9 @@ If you would like to support this project, use GitHub or write me an email: tobi
 5. Authentication: (https://ngx-auth-firebaseui.firebaseapp.com)
 
 # Current Main Task
-1. Build a Follower system
+1. Create search systems
 2. Build a Like system
 3. Build a Comment system
-4. Create search systems
 
 # Contributing
 > “Alone we can do so little; together we can do so much.” -Helen Keller
