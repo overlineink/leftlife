@@ -4,8 +4,7 @@ The goal of this project is to build an application which supports political par
 
 _The final result should be similar to this [prototype](https://xd.adobe.com/view/4934154e-d639-45d7-47ab-212c20ac9258-3f05/)_
 
-<img src="public/leftlife-preview.jpg">
-<img src="public/leftlife-preview-timeline.jpg">
+<img src="public/leftlife-preview.jpg">  <img src="public/leftlife-preview-timeline.jpg">
 
 # Contact
 If you would like to support this project, see [Contributing Guide](docs/tutorials/contributing.md) or write me an email: <a href="mailto:tobias.hassebrock@gmail.com">tobias.hassebrock@gmail.com</a>
